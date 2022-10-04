@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <!-- <meta name="format-detection" content="telephone=no"> -->
+    <meta name="description" content="">
+    
+    <title>Календарь мероприятий</title>
+</head>
+<body>
+
+    <div class="page calendar">
+        
+        <div class="header-phantom"></div>
+        <header id="header" class="header">
+            <div class="container">
+                <div class="header__inner header__inner--new">
+                    <div class="header__logo header__logo--new">
+                        <a href="/">
+                            <img src="/assets/images/logos/logo_mantera.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="header__center">
+                        <p class="header__title">КАЛЕНДАРЬ МЕРОПРИЯТИЙ ДЛЯ СОТРУДНИКОВ ХОЛДИНГА</p>
+                    </div>
+        
+                    <div class="header-right">
+                        <ul class="nav nav--new nav--languages">
+                            <li class="nav__item nav__item--new"><span class="language-toggler">ru</span> / <span
+                                    class="language-toggler">eng</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main -->
+        <main class="main main--new">
+            
+            <div class="section-bg section-bg--new section-bg--calendar"></div>
+            <div class="section-yellow-block section-yellow-block--sm"></div>
+            
+            <div class="section-new participation">
+                <div class="container">
+            
+                    <div class="section-title-left">КАК УЧАСТВОВАТЬ</div>
+            
+                    <div class="row align-items-center participation__content">
+                        <div class="col-lg-9 col-xl-8 col-xxl-7 col-sm-12">
+                            <div class="participation-item">
+                                <div class="participation-item__number">1</div>
+                                <p class="participation-item__text">Пройдите предварительную регистрацию (нажмите
+                                    на&nbsp;интересующее вас мероприятие).</p>
+                            </div>
+                            <div class="participation-item participation-item--pd">
+                                <div class="participation-item__number">2</div>
+                                <p class="participation-item__text">Подпишитесь на&nbsp;корпоративный телеграм-канал:
+                                    MANTERAHREVENTS, чтобы получать информацию по&nbsp;организационным вопросам.</p>
+                            </div>
+                            <div class="participation-item">
+                                <div class="participation-item__number">3</div>
+                                <p class="participation-item__text">Обязательно возьмите ваш рабочий пропуск с&nbsp;собой
+                                    на&nbsp;мероприятие.</p>
+                            </div>
+                        </div>
+            
+                        <div class="col-lg-3 col-xl-4 col-xxl-5 col-sm-12">
+                            <div class="participation__big-m"></div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="section-new schedule">
+                <div class="container">
+            
+                    <div class="section-title-right">
+                        <span class="section-title-right__span">
+                            РАСПИСАНИЕ МЕРОПРИЯТИЙ
+                            <hr class="section-title-right__hr section-title-right__hr--left" />
+                        </span>
+                    </div>
+            
+                    <div class="schedule-datepicker">
+                        <input type="text" class="datepicker-here schedule-datepicker__input" data-range="true"
+                            data-multiple-dates-separator=" - " placeholder="Выберите дату">
+                    </div>
+            
+                    <div class="schedule-item">
+                        <div class="schedule-item__header">
+                            <p class="schedule-item__date">09.10.2021</p>
+                            <p class="schedule-item__name">Корпоративный поход: Маршрут три Аибги</p>
+                        </div>
+            
+                        <div class="row schedule-item__main">
+                            <div class="col-xl-6 col-md-12 schedule-item-img">
+                                <div class="schedule-item-img__inner" style="background-image: url('../assets/images/bg-2.jpg')">
+                                </div>
+                            </div>
+            
+                            <div class="col-xl-6 col-md-12 schedule-item__info">
+                                <p class="schedule-item__text">Собираемся в поход!</p>
+                                <p class="schedule-item__text">Дата и время: 09.10 (суббота).<br>
+                                    Место поведения: Курорт Красная Поляна<br>
+                                    Участие бесплатное.</p>
+            
+                                <p class="schedule-item__text">Вы можете пригласить своих друзей и родственников (до 2 человек).</p>
+                                <p class="schedule-item__text truncate-row truncate-row-4">Экотропа расположена на северном склоне
+                                    горного массива Аибга в Цирке-3. Она начинается на высоте +2300 м у вершины Черная Пирамида и
+                                    идёт на восток до перевала. Экотропа расположена на северном склоне горного массива Аибга в
+                                    Цирке-3</p>
+                                <a class="btn-underline" href="javascript:void(0)" data-modal="schedule_item_1">Подробнее</a>
+                                <button class="btn btn--yellow schedule-item__btn" type="button" data-modal="fm_sign_up"
+                                    disabled>Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="schedule-item">
+                        <div class="schedule-item__header">
+                            <p class="schedule-item__date">17.10.2021</p>
+                            <p class="schedule-item__name">Корпоративная рыбалка</p>
+                        </div>
+            
+                        <div class="row schedule-item__main">
+                            <div class="col-xl-6 col-md-12 schedule-item-img">
+                                <div class="schedule-item-img__inner" style="background-image: url('../assets/images/bg-3.jpg')">
+                                </div>
+                            </div>
+            
+                            <div class="col-xl-6 col-md-12 schedule-item__info">
+                                <p class="schedule-item__text">Приглашаем вас поучаствовать в корпоративной рыбалке!</p>
+                                <p class="schedule-item__text">Дата и время: 17.10 (воскресенье) с 10:00 до 18:00<br>
+                                    Место проведения: карповые пруды (г.Сочи, Адлерский гоайон, с.Казачий брод, ул.Форелевая)<br>
+                                </p>
+            
+                                <p class="schedule-item__text">Вы можете пригласить своих друзей и родственников (до 2 человек).</p>
+                                <p class="schedule-item__text truncate-row truncate-row-4">Экотропа расположена на северном склоне
+                                    горного массива Аибга в Цирке-3. Она начинается на высоте +2300 м у вершины Черная Пирамида и
+                                    идёт на восток до перевала. Экотропа расположена на северном склоне горного массива Аибга в
+                                    Цирке-3</p>
+                                <a class="btn-underline" href="javascript:void(0)" data-modal="schedule_item_2">Подробнее</a>
+                                <button class="btn btn--yellow schedule-item__btn" type="button" data-modal="fm_sign_up"
+                                    disabled>Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="schedule-item">
+                        <div class="schedule-item__header">
+                            <p class="schedule-item__date">04.11.2021</p>
+                            <p class="schedule-item__name">Покерный турнир</p>
+                        </div>
+            
+                        <div class="row schedule-item__main">
+                            <div class="col-xl-6 col-md-12 schedule-item-img">
+                                <div class="schedule-item-img__inner" style="background-image: url('../assets/images/bg-4.jpg')">
+                                </div>
+                            </div>
+            
+                            <div class="col-xl-6 col-md-12 schedule-item__info">
+                                <p class="schedule-item__text">Собираемся в поход</p>
+                                <p class="schedule-item__text">Дата и время: 04.11 (воскресенье)<br>
+                                    Место проведения: Казино Сочи, п. Эстосадок, ул. Эстонская, 51<br>
+                                    Можно записаться сразу на нескольно дней.</p>
+            
+                                <p class="schedule-item__text">Вы можете пригласить своих друзей и родственников (до 2 человек).</p>
+                                <p class="schedule-item__text truncate-row truncate-row-4">Попробуйте свои силы в покерном турнире
+                                    Призовой фонд - 100 000 Р.
+                                    Вы также можете посетить школу покера и научиться игре в покер. Вы также можете посетить школу
+                                    покера и научиться игре в покер.</p>
+                                <a class="btn-underline" href="javascript:void(0)" data-modal="schedule_item_3">Подробнее</a>
+                                <button class="btn btn--yellow schedule-item__btn" type="button"
+                                    data-modal="fm_sign_up">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <a href="javascript:void(0)" class="btn-underline show-more-btn">ПОКАЗАТЬ ЕЩЕ</a>
+                    <hr>
+                    <button type="button" class="btn-underline show-more-btn">ПОКАЗАТЬ ЕЩЕ</button>
+            
+                </div>
+            </div>
+            
+            <div id="schedule_item_1" class="modal-custom modal-custom--fullscreen">
+                <div class="modal-custom__content schedule-modal-item">
+                    <section class="section-new section-new--fullscreen row justify-content-start align-items-center">
+                        <div class="container">
+                            <button class="modal-custom__close" type="button">
+                                <img src="/assets/images/times.svg" alt="close">
+                            </button>
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-md-10 schedule-modal-item__container">
+                                    <div class="row align-items-start">
+                                        <div
+                                            class="col-1 section-montera-vertical section-montera-vertical--bordered section-montera-vertical--mt">
+                                        </div>
+                                        <div class="col-md-11 col-sm-12">
+                                            <div class="news-item__header">
+                                                <div class="row align-items-center">
+                                                    <!-- <div class="col-md-3"><div class="news-item__preview" style="background-image: url(../assets/images/news.png);"></div></div> -->
+                                                    <div class="col-md-12">
+                                                        <div class="schedule-modal-item__header">
+                                                            <div class="schedule-modal-item__img"
+                                                                style="background-image: url('../assets/images/bg-2.jpg')"></div>
+                                                            <p class="schedule-modal-item__name">Корпоративный поход: Маршрут три
+                                                                Аибги</p>
+                                                        </div>
+            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="schedule-modal-item__text">
+                                                <p>Собираемся в поход!</p>
+                                                <p>Дата и время: 09.10 (суббота).<br>
+                                                    Место поведения: Курорт Красная Поляна<br>
+                                                    Участие бесплатное.</p>
+                                                <p>Вы можете пригласить своих друзей и родственников (до 2 человек).</p>
+                                                <p>Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.</p>
+            
+                                                <p>Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала. Экотропа расположена на северном склоне горного массива Аибга в
+                                                    Цирке-3. Она начинается на высоте +2300 м у вершины Черная Пирамида и идёт на
+                                                    восток до перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.</p>
+            
+                                                <p>Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала. Экотропа расположена на северном склоне горного массива Аибга в
+                                                    Цирке-3. Она начинается на высоте +2300 м у вершины Черная Пирамида и идёт на
+                                                    восток до перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.</p>
+            
+                                                <p>Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.</p>
+                                            </div>
+                                            <button class="btn btn--yellow schedule-item__btn schedule-modal-item__btn"
+                                                type="button" data-modal="fm_question">Записаться</button>
+                                        </div>
+                                    </div>
+                                </div>
+                    </section>
+                </div>
+            </div>
+            
+            <div id="schedule_item_2" class="modal-custom modal-custom--fullscreen">
+                <div class="modal-custom__content schedule-modal-item">
+                    <section class="section-new section-new--fullscreen row justify-content-start align-items-center">
+                        <div class="container">
+                            <button class="modal-custom__close" type="button">
+                                <img src="/assets/images/times.svg" alt="close">
+                            </button>
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-md-10 schedule-modal-item__container">
+                                    <div class="row align-items-start">
+                                        <div
+                                            class="col-1 section-montera-vertical section-montera-vertical--bordered section-montera-vertical--mt">
+                                        </div>
+                                        <div class="col-md-11 col-sm-12">
+                                            <div class="news-item__header">
+                                                <div class="row align-items-center">
+                                                    <!-- <div class="col-md-3"><div class="news-item__preview" style="background-image: url(../assets/images/news.png);"></div></div> -->
+                                                    <div class="col-md-12">
+                                                        <div class="schedule-modal-item__header">
+                                                            <div class="schedule-modal-item__img"
+                                                                style="background-image: url('../assets/images/bg-2.jpg')"></div>
+                                                            <p class="schedule-modal-item__name">Корпоративный поход: Маршрут три
+                                                                Аибги</p>
+                                                        </div>
+            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="schedule-modal-item__text">
+                                                <p>Собираемся в поход!</p>
+                                                <p>Дата и время: 09.10 (суббота).<br>
+                                                    Место поведения: Курорт Красная Поляна<br>
+                                                    Участие бесплатное.</p>
+                                                <p>Вы можете пригласить своих друзей и родственников (до 2 человек).</p>
+                                                <p>Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.</p>
+            
+                                                <p>Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала. Экотропа расположена на северном склоне горного массива Аибга в
+                                                    Цирке-3. Она начинается на высоте +2300 м у вершины Черная Пирамида и идёт на
+                                                    восток до перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.</p>
+            
+                                                <p>Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала. Экотропа расположена на северном склоне горного массива Аибга в
+                                                    Цирке-3. Она начинается на высоте +2300 м у вершины Черная Пирамида и идёт на
+                                                    восток до перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.</p>
+            
+                                                <p>Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.</p>
+                                            </div>
+                                            <button class="btn btn--yellow schedule-item__btn schedule-modal-item__btn"
+                                                type="button" data-modal="fm_question">Записаться</button>
+                                        </div>
+                                    </div>
+                                </div>
+                    </section>
+                </div>
+            </div>
+            
+            <div id="schedule_item_3" class="modal-custom modal-custom--fullscreen">
+                <div class="modal-custom__content schedule-modal-item">
+                    <section class="section-new section-new--fullscreen row justify-content-start align-items-center">
+                        <div class="container">
+                            <button class="modal-custom__close" type="button">
+                                <img src="/assets/images/times.svg" alt="close">
+                            </button>
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-md-10 schedule-modal-item__container">
+                                    <div class="row align-items-start">
+                                        <div
+                                            class="col-1 section-montera-vertical section-montera-vertical--bordered section-montera-vertical--mt">
+                                        </div>
+                                        <div class="col-md-11 col-sm-12">
+                                            <div class="news-item__header">
+                                                <div class="row align-items-center">
+                                                    <!-- <div class="col-md-3"><div class="news-item__preview" style="background-image: url(../assets/images/news.png);"></div></div> -->
+                                                    <div class="col-md-12">
+                                                        <div class="schedule-modal-item__header">
+                                                            <div class="schedule-modal-item__img"
+                                                                style="background-image: url('../assets/images/bg-2.jpg')"></div>
+                                                            <p class="schedule-modal-item__name">Корпоративный поход: Маршрут три
+                                                                Аибги</p>
+                                                        </div>
+            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="schedule-modal-item__text">
+                                                <p>Собираемся в поход!</p>
+                                                <p>Дата и время: 09.10 (суббота).<br>
+                                                    Место поведения: Курорт Красная Поляна<br>
+                                                    Участие бесплатное.</p>
+                                                <p>Вы можете пригласить своих друзей и родственников (до 2 человек).</p>
+                                                <p>Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.</p>
+            
+                                                <p>Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала. Экотропа расположена на северном склоне горного массива Аибга в
+                                                    Цирке-3. Она начинается на высоте +2300 м у вершины Черная Пирамида и идёт на
+                                                    восток до перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.</p>
+            
+                                                <p>Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала. Экотропа расположена на северном склоне горного массива Аибга в
+                                                    Цирке-3. Она начинается на высоте +2300 м у вершины Черная Пирамида и идёт на
+                                                    восток до перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.
+                                                    Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.</p>
+            
+                                                <p>Экотропа расположена на северном склоне горного массива Аибга в Цирке-3. Она
+                                                    начинается на высоте +2300 м у вершины Черная Пирамида и идёт на восток до
+                                                    перевала.</p>
+                                            </div>
+                                            <button class="btn btn--yellow schedule-item__btn schedule-modal-item__btn"
+                                                type="button" data-modal="fm_question">Записаться</button>
+                                        </div>
+                                    </div>
+                                </div>
+                    </section>
+                </div>
+            </div>
+            <div class="modal-custom" id="fm_sign_up">
+                <div class="modal-custom__content modal-custom__content--wide modal-custom__content--white">
+                    <div class="modal-custom__header mb22">
+                        <button class="modal-custom__close" type="button">
+                            <img src="/assets/images/times.svg" alt="close">
+                        </button>
+                        <img class="modal-custom__logo" src="/assets/images/logos/logo_mantera.svg" height="18px" />
+                        <h3 class="modal-custom__subtitle">Запись на участие в мероприятии</h3>
+                    </div>
+                    <form class="form-custom" name="fm_sign_up" data-name="question" data-title="Задать вопрос" action="/"
+                        method="POST">
+                        <div class="message">
+                            <div class="message__form">
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-custom__group">
+                                            <label for="date">Дата: <span class="required">*</span></label>
+                                            <input name="date" class="datepicker-here form-custom__input" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-custom__group">
+                                            <label for="company">Компания: <span class="required">*</span></label>
+                                            <input name="company" class="form-custom__input" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-custom__group">
+                                            <label for="name">Имя: <span class="required">*</span></label>
+                                            <input name="name" class="form-custom__input" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-custom__group">
+                                            <label for="name">Фамилия: <span class="required">*</span></label>
+                                            <input name="last_name" class="form-custom__input" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-custom__group form-custom__group--last">
+                                            <label for="name">Телефон: <span class="required">*</span></label>
+                                            <input name="phone" class="form-custom__input" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-custom__group form-custom__group--last">
+                                            <label for="name">E-mail: <span class="required">*</span></label>
+                                            <input name="email" class="form-custom__input" type="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <div class="form-custom__group form-custom__group--last">
+                                            <label for="name">Афиша мероприятия: <span class="required">*</span></label>
+                                            <div id="multiselect"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="name">Ваш вопрос: <span class="required">*</span></label>
+                                    <textarea name="comment" class="form-custom__textarea" type="text" required></textarea>
+                                </div>
+                                <div class="form-custom__footer form-custom__footer--center">
+                                    <div class="form-custom__policy form-custom__policy--pd">
+                                        Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку <a target="_blank"
+                                            href="/policy.html">персональных данных</a>
+                                    </div>
+                                    <input type="submit" class="btn btn--yellow btn--w50 btn--h60" value="Отправить" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="section-new events">
+                <div class="container">
+            
+                    <div class="section-title-left">НЕДАВНИЕ МЕРОПРИЯТИЯ</div>
+            
+                    <div class="row justify-content-md-center align-content-center events__content">
+            
+                        <div class="col-md-10">
+                            <div class="events-slider slick-slider--big-arrows">
+            
+                                <div class="events-slider-item">
+                                    <div class="row events-slider-item__wrap">
+                                        <div class="col-xl-8 col-md-12 events-slider-item__video">
+                                            <iframe width="100%" height="395" src="https://www.youtube.com/embed/ea5uxRmRe8Y"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen class="js-iframe"></iframe>
+                                            <div class="events-slider-item__poster"
+                                                style="background: url(../assets/images/bg-5.jpg);">
+                                                <div class="events-slider-item__icon js-icon-play">
+                                                    <svg width="70" height="70" viewBox="0 0 60 60" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="30" cy="30" r="30" fill="black"></circle>
+                                                        <path d="M41 29.7495L24.0014 19.2495L24.0061 40.2493L41 29.7495Z"
+                                                            fill="white"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-xl-4 col-md-12 events-slider-item__content">
+                                            <p class="events-slider-item__date">13.09.2021</p>
+                                            <p class="events-slider-item__name">Покерный турнир</p>
+                                            <p class="events-slider-item__text">13 сентября 2021 года в Казино Сочи состоялися
+                                                покерный турнир, в котором приняли участие более 1 000 человек.
+                                                Победителем турнира стал неоднократный победитель...</p>
+            
+                                            <p class="events-slider-item__text">13 сентября 2021 года в Казино Сочи состоялися
+                                                покерный турнир, в котором приняли участие более 1 000 человек.
+                                                Победителем турнира стал неоднократный победитель...</p>
+                                            <a class="btn-underline" href="javascript:void(0)"
+                                                data-modal="schedule_item_1">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="events-slider-item">
+                                    <div class="row events-slider-item__wrap">
+                                        <div class="col-xl-8 col-md-12 events-slider-item__video">
+                                            <iframe width="100%" height="395" src="https://www.youtube.com/embed/ea5uxRmRe8Y"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen class="js-iframe"></iframe>
+                                            <div class="events-slider-item__poster"
+                                                style="background: url(../assets/images/bg-5.jpg);">
+                                                <div class="events-slider-item__icon js-icon-play">
+                                                    <svg width="70" height="70" viewBox="0 0 60 60" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="30" cy="30" r="30" fill="black"></circle>
+                                                        <path d="M41 29.7495L24.0014 19.2495L24.0061 40.2493L41 29.7495Z"
+                                                            fill="white"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-xl-4 col-md-12 events-slider-item__content">
+                                            <p class="events-slider-item__date">13.09.2021</p>
+                                            <p class="events-slider-item__name">Покерный турнир</p>
+                                            <p class="events-slider-item__text">13 сентября 2021 года в Казино Сочи состоялися
+                                                покерный турнир, в котором приняли участие более 1 000 человек.
+                                                Победителем турнира стал неоднократный победитель...
+            
+                                                13 сентября 2021 года в Казино Сочи состоялися покерный турнир, в котором приняли
+                                                участие более 1 000 человек.
+                                                Победителем турнира стал неоднократный победитель...</p>
+                                            <a class="btn-underline" href="javascript:void(0)"
+                                                data-modal="schedule_item_2">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="events-slider-item">
+                                    <div class="row events-slider-item__wrap">
+                                        <div class="col-xl-8 col-md-12 events-slider-item__video">
+                                            <iframe width="100%" height="395" src="https://www.youtube.com/embed/ea5uxRmRe8Y"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen class="js-iframe"></iframe>
+                                            <div class="events-slider-item__poster"
+                                                style="background: url(../assets/images/bg-5.jpg);">
+                                                <div class="events-slider-item__icon js-icon-play">
+                                                    <svg width="70" height="70" viewBox="0 0 60 60" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="30" cy="30" r="30" fill="black"></circle>
+                                                        <path d="M41 29.7495L24.0014 19.2495L24.0061 40.2493L41 29.7495Z"
+                                                            fill="white"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-xl-4 col-md-12 events-slider-item__content">
+                                            <p class="events-slider-item__date">13.09.2021</p>
+                                            <p class="events-slider-item__name">Покерный турнир</p>
+                                            <p class="events-slider-item__text">13 сентября 2021 года в Казино Сочи состоялися
+                                                покерный турнир, в котором приняли участие более 1 000 человек.
+                                                Победителем турнира стал неоднократный победитель...
+            
+                                                13 сентября 2021 года в Казино Сочи состоялися покерный турнир, в котором приняли
+                                                участие более 1 000 человек.
+                                                Победителем турнира стал неоднократный победитель...</p>
+                                            <a class="btn-underline" href="javascript:void(0)"
+                                                data-modal="schedule_item_3">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <script>
+                var iconsPlay = document.querySelectorAll(".js-icon-play");
+            
+                iconsPlay.forEach(icon => icon.addEventListener("click", function () {
+                    icon.parentNode.style.display = "none";
+                    icon.parentNode.previousElementSibling.src += "?autoplay=1";
+                }));
+            
+                // document.addEventListener('DOMContentLoaded', function () {
+                //     $('.datepicker-custom').datepicker({
+                //         minDate: new Date(),
+                //     });
+            
+                // })
+            
+                document.addEventListener("DOMContentLoaded", function(){
+                    const multi = new MultiselectUI('#multiselect', {
+                        placeholder: 'Выберите направления',
+                        name: 'test',
+                        // selectedId: '2',
+                        data: [
+                            {id: '1', value: '10:00 Школа покера', dataProp: '10-12-2021, 20-12-2021'},
+                            {id: '2', value: '11:00 Школа покера', dataProp: '10-12-2021, 20-12-2021'},
+                            {id: '3', value: '12:00 Школа покера', dataProp: '11-12-2021, 21-12-2021'},
+                            {id: '4', value: '10:00 Школа покера', dataProp: '12-12-2021, 22-12-2021'},
+                            {id: '5', value: '10:00 Школа покера', dataProp: '13-12-2021, 23-12-2021'},
+                            {id: '6', value: '10:00 Школа покера', dataProp: '14-12-2021, 24-12-2021'},
+                        ],
+                            onSelect(item){
+                            console.log('selected Item', item)
+                        }
+                    })
+                })
+            </script>
+        </main>
+
+        <footer class="footer-new">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                            <!-- <div class="footer-new__logo"></div> -->
+                            <div class="typography-body2 typography-bold typography-uppercase mb22">Контакты</div>
+                            <div class="typography-body2 mb22">Юридический адрес: 354340, Россия, Краснодарский край, г. Сочи, проспект континентальный, дом 6, офис 1</div>
+                            <div class="typography-body2 mb22">E-mail: info@mantera-group.com</div>
+                            <div class="typography-body2 typography-bold typography-uppercase mb22">ПРЕСС-СЛУЖБА КОМПАНИИ MANTERA</div>
+                            <div class="typography-body2 mb22">E-mail: pr@mantera-group.com</div>
+                            <div class="row">
+                                <div class="col-md-6 col-12 mb22">
+                                    <button class="btn btn--yellow btn--w100" type="button" data-modal="fm_question">Задать вопрос</button>
+                                </div>
+                            </div>
+                            
+                            <div class="footer__social-list">
+                                <a class="footer__social-item"
+                                    style="background-image: url('../assets/images/social/fb.png');"></a>
+                                <a class="footer__social-item"
+                                    style="background-image: url('../assets/images/social/inst.png');"></a>
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-new__photo"></div>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="footer__hr">
+                        <div class="typography-body2 typography-bold">&copy; 2021 MANTERA</div>
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+        
+        <button class="arrow-up" id="buttonUp" title="Меню">
+            <img src="/assets/images/up.svg" alt="меню">
+        </button>
+        
+        <div class="modal-custom" id="fm_question">
+            <div class="modal-custom__content modal-custom__content--white">
+                <div class="modal-custom__header pb-5">
+                    <button class="modal-custom__close" type="button">
+                        <img src="/assets/images/times.svg" alt="close">
+                    </button>
+                    <img class="modal-custom__logo" src="/assets/images/logos/logo_mantera.svg" height="18px" />
+                    <!-- <h3 class="modal-custom__subtitle">Задайте нам любой интересующий вас вопрос в поле комментарий</h3> -->
+                </div>
+                <form class="form-custom" name="fm_question" data-name="question" data-title="Задать вопрос" action="/" method="POST">
+                    <div class="message">
+                        <div class="message__form">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group">
+                                        <label for="name">Имя: <span class="required">*</span></label>
+                                        <input name="name" class="form-custom__input" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group">
+                                        <label for="name">Фамилия: <span class="required">*</span></label>
+                                        <input name="last_name" class="form-custom__input" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group form-custom__group--last">
+                                        <label for="name">Телефон: <span class="required">*</span></label>
+                                        <input name="phone" class="form-custom__input" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group form-custom__group--last">
+                                        <label for="name">E-mail: <span class="required">*</span></label>
+                                        <input name="email" class="form-custom__input" type="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="name">Ваш вопрос: <span class="required">*</span></label>
+                                <textarea name="comment" class="form-custom__textarea" type="text" required></textarea>
+                            </div>
+                            <div class="form-custom__footer form-custom__footer--center">
+                                <div class="form-custom__policy">
+                                    Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку <a target="_blank" href="/policy.html">персональных данных</a>
+                                </div>
+                                <input type="submit" class="btn btn--yellow btn--w50" value="Отправить" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            // function setMask(elm) {
+            //     MaskedInput({
+            //         elm,
+            //         format: '+7 (___) ___-__-__',
+            //         separator: '+7 (   )-'
+            //     });
+            // }
+        
+            // window.onload = function () {
+            //     var inputPhone = document.querySelectorAll('input[name=phone]')
+        
+            //     inputPhone.forEach(input => {
+            //         setMask(input)
+            //         input.addEventListener("change", setMask)
+            //     });
+            // }
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                $("input[name=phone]").mask("+7 (999) 999 9999");
+            })
+        </script>    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/datepicker.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/select2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/multiselect-ui.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+</body>
+</html>

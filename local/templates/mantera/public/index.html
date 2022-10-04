@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <!-- <meta name="format-detection" content="telephone=no"> -->
+    <meta name="description" content="">
+    
+    <title>Mantera</title>
+</head>
+<body>
+
+    <div class="page">
+        
+        <div class="header-phantom"></div>
+        <header id="header" class="header">
+            <div class="container">
+                <div class="header__inner header__inner--new">
+                    <!-- <div class="nav-burger">
+                        <button class="burger" type="button" onclick="openNav()">
+                            <span class="burger__item">Menu</span>
+                        </button>
+                    </div> -->
+                    <div class="nav-burger">
+                        <div id="nav_burger__open" class="nav-burger__open" onclick="openNav()"></div>
+                        <div id="nav_burger__close" class="nav-burger__close" onclick="closeNav()"></div>
+                    </div>
+                    <div class="header__logo header__logo--new">
+                        <a href="/">
+                            <img src="/assets/images/logos/logo_mantera.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="header__center">
+                        <nav class="nav nav--new" id="nav">
+                            <ul class="nav__list nav__list--new">
+                                <li class="nav__item nav__item--new">
+                                    <a href="/#news" class="nav__link nav__link--new">Новости</a>
+                                </li>
+                                <li class="nav__item nav__item--new">
+                                    <a href="/#about" class="nav__link nav__link--new">О компании</a>
+                                </li>
+                                <li class="nav__item nav__item--new">
+                                    <a href="/#assets" class="nav__link nav__link--new">Активы</a>
+                                </li>
+                                <li class="nav__item nav__item--new">
+                                    <a href="/#solutions" class="nav__link nav__link--new">Экспертные решения</a>
+                                </li>
+                                <li class="nav__item nav__item--new">
+                                    <a href="/#projects" class="nav__link nav__link--new">Перспективные проекты</a>
+                                </li>
+                                <li class="nav__item nav__item--new">
+                                    <a href="/#media" class="nav__link nav__link--new">Медиа</a>
+                                </li>
+                            </ul>
+                        </nav>
+        
+                    </div>
+        
+                    <div class="header-right">
+                        <ul class="nav nav--new nav--languages">
+                            <li class="nav__item nav__item--new"><span class="language-toggler">ru</span> / <span
+                                    class="language-toggler">eng</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="sidepanel_mobile" class="sidepanel">
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+            <a href="#news"><span>Новости</span></a>
+            <a href="#about"><span>О компании</span></a>
+            <a href="#assets"><span>Активы</span></a>
+            <a href="#solutions"><span>Экспертные решения</span></a>
+            <a href="#projects"><span>Перспективные проекты</span></a>
+            <a href="#media"><span>Медиа</span></a>
+        </div>
+        <script>
+                var sidepanel = document.getElementById("sidepanel_mobile"),
+                    nav_open = document.getElementById("nav_burger__open"),
+                    nav_close = document.getElementById("nav_burger__close"),
+                    menu_items = sidepanel.querySelectorAll("a");
+        
+                function transformMenu(open = true) {
+                    sidepanel.style.left = open ? "0" : "-300px";
+                    nav_open.style.opacity = open ? "0" : "1";
+                    nav_close.style.opacity = open ? "1" : "0";
+                    nav_open.style.visibility = open ? "hidden" : "visible";
+                    nav_close.style.visibility = open ? "visible" : "hidden";
+                }
+        
+                menu_items.forEach(item => item.addEventListener("click", closeNav))
+        
+                /* Set the width of the sidebar to 300px (show it) */
+                function openNav() {
+                    transformMenu(true)
+                }
+        
+                /* Set the width of the sidebar to 0 (hide it) */
+                function closeNav() {
+                    transformMenu(false)
+                }
+                // $(".menuBoxAdapt").click(function () {
+                //     openNav()
+                // })
+        </script>
+        <!-- Main -->
+        <main class="main main--new">
+            
+            <div class="section-bg section-bg--new">
+            </div>
+            <div class="section-yellow-block section-yellow-block--sm"></div>
+            
+            <div id="news_item_1" class="modal-custom modal-custom--fullscreen">
+                <div class="modal-custom__content news-item">
+                    <section class="section-new section-new--fullscreen row justify-content-start align-items-center">
+                        <div class="container">
+                            <button class="modal-custom__close" type="button">
+                                <img src="/assets/images/times.svg" alt="close">
+                            </button>
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-md-10">
+                                    <div class="row align-items-center">
+                                        <div class="col-1 section-montera-vertical section-montera-vertical--bordered"></div>
+                                        <div class="col-md-11 col-sm-12">
+                                            <div class="news-item__header">
+                                                <div class="row align-items-center">
+                                                    <!-- <div class="col-md-3"><div class="news-item__preview" style="background-image: url(../assets/images/news.png);"></div></div> -->
+                                                    <div class="col-md-9">
+                                                        <span class="typography-h3">03.09.2021</span><br /><br />
+                                                        <span class="typography-h3">Управляющая компания MANTERA вложит 38
+                                                            миллиардов рублей в развитие туризма на Дальнем Востоке.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="typography-body2">
+                                                <p>Соглашения о строительстве новых объектов мирового уровня с развитой
+                                                    инфраструктурой были подписаны 2 и 3 сентября на Восточном экономическом форуме.
+                                                    Общий объем инвестиций составит 38 миллиардов рублей. Строительство парка
+                                                    развлечений, гольф-клуба и казино начнется в 2022 году. Реализовать проекты
+                                                    компания планирует в течение четырех лет. Данные соглашения на стенде корпорации
+                                                    развития Дальнего Востока подписали АО «Корпорация развития Дальнего Востока и
+                                                    Арктики», АО «Корпорация развития Приморского края», Автономная некоммерческая
+                                                    организация «Инвестиционное Агентство Приморского края» и Общество с
+                                                    ограниченной ответственностью «Восток Резортс».</p>
+                                                <p>«Прежде всего хочу поблагодарить инвестора и пожелать ему успехов в реализации
+                                                    соглашений. На церемонии присутствуют представители трёх институтов развития.
+                                                    Коллеги, ваша задача от имени и по поручению Правительства Российской Федерации,
+                                                    Приморского края поддерживать и помогать инвестору. Нам нужны такие проекты,
+                                                    нужно создавать условия для отдыха людей, для привлечения туристов в Приморский
+                                                    край. Это очень большая и важная работа», - отметил в своем выступлении
+                                                    полномочный представитель Президента РФ в ДФО Юрий Трутнев. Общий объем
+                                                    инвестиций тематического парка развлечений и курортно-гостиничного комплекса
+                                                    «Парк Русский» на острове Русский во Владивостоке оценивается в 15 млрд рублей.
+                                                </p>
+                                                <p>В строительство уникального для России гольф-курорта мирового уровня, в
+                                                    инфраструктуру которого будет включен отель компания вложит 8,5 млрд рублей. Еще
+                                                    14,5 млрд рублей составят инвестиции в игорно-развлекательный комплекс с казино
+                                                    и гостиницей. «Это грандиозные проекты, как для увеличения въездного
+                                                    туристического потока, внутреннего туризма, так и для развития индустрии
+                                                    развлечений на международном рынке, –рассказал Дмитрий Анфиногенов, директор по
+                                                    продажам управляющей компании MANTERA. – Наша стратегия: развиваться,
+                                                    инвестировать и реализовывать смелые проекты. Появление новых объектов в
+                                                    Приморье откроет «двери» в сферу туризма и развлечений России для иностранцев. И
+                                                    конечно, предоставит новые возможности для полноценного и качественного отдыха
+                                                    самим россиянам».
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    </section>
+                </div>
+            </div>
+            
+            <div id="news_item_2" class="modal-custom modal-custom--fullscreen">
+                <div class="modal-custom__content news-item">
+                    <section class="section-new section-new--fullscreen row justify-content-start align-items-center">
+                        <div class="container">
+                            <button class="modal-custom__close" type="button">
+                                <img src="/assets/images/times.svg" alt="close">
+                            </button>
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-md-10">
+                                    <div class="row align-items-center">
+                                        <div class="col-1 section-montera-vertical section-montera-vertical--bordered"></div>
+                                        <div class="col-md-11 col-sm-12">
+                                            <div class="news-item__header">
+                                                <div class="row align-items-center">
+                                                    <!-- <div class="col-md-3"><div class="news-item__preview" style="background-image: url(../assets/images/news.png);"></div></div> -->
+                                                    <div class="col-md-9">
+                                                        <span class="typography-h3">18.09.2021</span><br /><br />
+                                                        <span class="typography-h3">Винодельня Château de Talu представила
+                                                            возможности гастрономического туризма.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="typography-body2">
+                                                <p> 18 сентября состоялось торжественное открытие ресторанно-дегустационного
+                                                    комплекса Château de Talu. Он станет новой и важной точкой притяжения
+                                                    эногастрономического туризма в Краснодарском крае и позволит гостям насладится
+                                                    настоящим кусочком Франции.</p>
+                                                <p>Туристам будут доступны экскурсии по винограднику и заводу, дегустации,
+                                                    французская эстетика в архитектуре и интерьерах, а также локальная черноморская
+                                                    кухня от бренд-шефа Ильи Захарова, дополненная панорамным видом на море. Также
+                                                    здесь можно провести выездную регистрацию, организовать свадебную церемонию или
+                                                    устроить фотосессию.</p>
+                                                <p>Винный портфель Château de Talu включает около 15 наименований вин из европейских
+                                                    сортов винограда, выпущенных под руководством известного французского энолога
+                                                    Франка Дюсенера. Общая площадь плодоносящих виноградников составляет 101,3 га, а
+                                                    объем производства вина - 1,3 млн бутылок в год.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    </section>
+                </div>
+            </div>
+            
+            <div id="news_item_3" class="modal-custom modal-custom--fullscreen">
+                <div class="modal-custom__content news-item">
+                    <section class="section-new section-new--fullscreen row justify-content-start align-items-center">
+                        <div class="container">
+                            <button class="modal-custom__close" type="button">
+                                <img src="/assets/images/times.svg" alt="close">
+                            </button>
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-md-10">
+                                    <div class="row align-items-center">
+                                        <div class="col-1 section-montera-vertical section-montera-vertical--bordered"></div>
+                                        <div class="col-md-11 col-sm-12">
+                                            <div class="news-item__header">
+                                                <div class="row align-items-center">
+                                                    <!-- <div class="col-md-3"><div class="news-item__preview" style="background-image: url(../assets/images/news.png);"></div></div> -->
+                                                    <div class="col-md-9">
+                                                        <span class="typography-h3">28.09.2021</span><br /><br />
+                                                        <span class="typography-h3">Интегрированный горный Курорт Красная Поляна
+                                                            стал обладателем ценных наград.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="typography-body2">
+                                                <p>Курорт Красная Поляна в сентябре стал обладателем ряда важных наград. Так, во
+                                                    Всемирный день туризма от Администрации города Сочи Курорт Красная Поляна
+                                                    получил награду «За развитие экологического туризма». На торжественной церемонии
+                                                    присутствовали лучшие представители санаторно-курортной и туристической отраслей
+                                                    города. Для Курорта Красная Поляна, который уделяет много внимания развитию
+                                                    устойчивого туризма на российском рынке, награда за работу в направлении
+                                                    экотуризма – особенное достижение.</p>
+                                                <p>Усилия по развитию сети экологических троп и снижению воздействия отелей на
+                                                    окружающую среду сделали курорт одним из флагманов сегмента устойчивого туризма
+                                                    на природных территориях. Кроме того, на торжественной церемонии награждения
+                                                    премией Ski Business Awards 2021, которая состоялась в Москве в рамках IV
+                                                    Всероссийского форума «Живу спортом» курорт стал победителем в номинации «Лучший
+                                                    интегрированный курорт».</p>
+                                                <p>Новый формат интегрированного горного курорта Курорт Красная Поляна представил в
+                                                    сентябре 2019 года. Он предложил гостям разнообразные варианты для отдыха с
+                                                    развлекательным якорем и объединил под одним брендом всё то, что развивалось
+                                                    долгие годы как отдельные направления: 9 отелей и апартаменты, казино,
+                                                    конференц- и выставочные залы, развлечения, магазины, рестораны и многое другое.
+                                                    Также 3 отеля Курорта Красная Поляна Mövenpick Krasnaya Polyana, Novotel Resort
+                                                    Krasnaya Polyana и ibis Styles Krasnaya Polyana вошли в десятку лучших отелей
+                                                    Северной Европы среди брендов гостиничной группы Accor.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    </section>
+                </div>
+            </div>
+            
+            <section id="news" class="section-new section-new--news">
+                <div class="container">
+                    <div class="section-title-left">
+                        Новости
+                    </div>
+                    <div class="row justify-start align-items-center h100">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="news-list">
+                                <div class="news-list__item">
+                                    <h3 class="news-list__title news-list__title--new">28.09.2021</h3>
+                                    <p class="news-list__text news-list__text--bold news-list__text--new">
+                                        Интегрированный горный Курорт Красная Поляна стал обладателем ценных наград.
+                                    </p>
+                                    <p class="news-list__text news-list__text--new">
+                                        Курорт Красная Поляна в сентябре стал обладателем ряда важных наград. Так, во Всемирный день
+                                        туризма от Администрации города Сочи Курорт Красная Поляна получил награду «За развитие
+                                        экологического туризма»...
+                                        <span><a class="news-list__link news-list__link--new" href="javascript:void(0)"
+                                                data-modal="news_item_3">Подробнее</a></span>
+                                    </p>
+                                </div>
+            
+                                <div class="news-list__item">
+                                    <h3 class="news-list__title news-list__title--new">18.09.2021</h3>
+                                    <p class="news-list__text news-list__text--bold news-list__text--new">
+                                        Винодельня Château de Talu представила возможности гастрономического туризма.
+                                    </p>
+                                    <p class="news-list__text news-list__text--new">
+                                        18 сентября состоялось торжественное открытие ресторанно-дегустационного комплекса Château
+                                        de Talu. Он станет новой и важной точкой притяжения эногастрономического туризма...
+                                        <span><a class="news-list__link news-list__link--new" href="javascript:void(0)"
+                                                data-modal="news_item_2">Подробнее</a></span>
+                                    </p>
+                                </div>
+            
+                                <div class="news-list__item">
+                                    <h3 class="news-list__title news-list__title--new">03.09.2021</h3>
+                                    <p class="news-list__text news-list__text--bold news-list__text--new">
+                                        Управляющая компания MANTERA вложит 38 миллиардов рублей в развитие туризма на Дальнем
+                                        Востоке.
+                                    </p>
+                                    <p class="news-list__text news-list__text--new">
+                                        Соглашения о строительстве новых объектов мирового уровня с развитой инфраструктурой были
+                                        подписаны 2 и 3 сентября на Восточном экономическом форуме...
+                                        <span><a class="news-list__link news-list__link--new" href="javascript:void(0)"
+                                                data-modal="news_item_1">Подробнее</a></span>
+                                    </p>
+                                </div>
+                                <div><a class="news-list__link" href="/news.html">Все новости</a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 section-image">
+                            <div class="section-image__inner" style="background-image: url('../assets/images/news.png');"></div>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+            
+            <section id="about" class="section-new row justify-content-start align-items-center h100">
+                <div class="container">
+                    <div>
+                        <div class="section-title-right">
+                            <span class="section-title-right__span">
+                                О компании
+                                <hr class="section-title-right__hr" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-2 section-montera-vertical"></div>
+                        <div class="col-md-8 col-sm-12 about__text-new">
+                            <p class="typography-body mb40">MANTERA — управляющая компания, созданная в 2021 году для объединения
+                                лучших курортов и центров
+                                притяжения России в единую экосистему впечатлений.</p>
+                            <p class="typography-body mb40">Ключевые направления деятельности MANTERA — развитие туристических
+                                дестинаций, девелопмент,
+                                управление
+                                отелями в партнерстве с глобальными сетевыми брендами, разработка и внедрение новых стандартов
+                                гостеприимства.</p>
+                            <p class="typography-body mb40">Развивая лучшие мировые практики в сфере гостеприимства, MANTERA
+                                разработала экспертную систему
+                                управления, которая позволяет эффективно масштабировать бизнес с неизменно высоким качеством
+                                сервиса.
+                            </p>
+                            <p class="typography-body">Каждый проект экосистемы MANTERA — это синергия яркого эмоционального опыта
+                                наших гостей, передовых
+                                технологий сервиса, высокой эстетики пространств, экологичности и заботы о здоровье.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-new">
+                <div class="container">
+                    <div class="row align-items-center section-mobile-reverse">
+            
+                        <div class="col-lg-3 col-xl-4 col-xxl-5 col-sm-12">
+                            <div class="facts__big-m"></div>
+                        </div>
+            
+                        <div class="col-lg-9 col-xl-8 col-xxl-7 col-sm-12 facts__table">
+                            <div class="facts__table-row typography-h2 typography-uppercase facts__table-row--title">ЦИФРЫ И ФАКТЫ:
+                                MANTERA</div>
+                            <div class="facts__table-row typography-body typography-uppercase">
+                                <div>ГОД ОСНОВАНИЯ</div>
+                                <div>2021</div>
+                            </div>
+                            <div class="facts__table-row typography-body typography-uppercase">
+                                <div>ПЛАНИРУЕМЫЕ ИНВЕСТИЦИИ (2021 - 2025 Г.Г.)</div>
+                                <div>100 млрд руб.</div>
+                            </div>
+                            <div class="facts__table-row typography-body typography-uppercase">
+                                <div>ОБОРОТ</div>
+                                <div>20 млрд руб.</div>
+                            </div>
+                            <div class="facts__table-row typography-body typography-uppercase">
+                                <div>ЧИСЛО СОТРУДНИКОВ</div>
+                                <div>6 000 чел.</div>
+                            </div>
+                            <div class="facts__table-row typography-body typography-uppercase">
+                                <div>ПОСЕЩАЕМОСТЬ (2020 Г.)</div>
+                                <div>3 000 000 чел.</div>
+                            </div>
+                            <div class="facts__table-row typography-body typography-uppercase">
+                                <div>НОМЕРНОЙ ФОНД</div>
+                                <div>6 000 номеров</div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </section>
+            
+            <section id="solutions"
+                class="section-new row justify-content-md-between align-items-center justify-content-sm-cener h100">
+            
+                <div class="container">
+                    <div class="section-title-left">
+                        Экспертные решения
+                    </div>
+                    <div class="row align-items-center section-experts">
+                        <div class="col-md-6 col-sm-12 section-image">
+                            <div class="section-image" style="background-image: url('../assets/images/photo2.png');"></div>
+                        </div>
+            
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5 col-sm-12">
+                            <p class="typography-body2 typography-uppercase typography-bold mb22">Цифровой сервис</p>
+                            <p class="typography-body2 mb65">MANTERA разработала и успешно применяет собственную цифровую систему
+                                управления гостеприимством, которая позволяет максимизировать как эффективность бизнес-модели, так и
+                                уровень удовлетворённости гостей.</p>
+            
+                            <p class="typography-body2 typography-uppercase typography-bold mb22">КОМПЛЕКСНОЕ РАЗВИТИЕ</p>
+                            <p class="typography-body2 mb65">За каждым проектом MANTERA стоит продуманный сценарий consumer journey,
+                                что позволяет наиболее эффективно использовать возможности каждой территории и предложить
+                                разнообразие сервисов, охватывающие все сегменты потенциальной аудитории.</p>
+            
+                            <p class="typography-body2 typography-uppercase typography-bold mb22">ЭСТЕТИКА ПРОСТРАНСТВА</p>
+                            <p class="typography-body2">Команда MANTERA уделяет особое внимание архитектуре и благоустройству
+                                территории, используя лучший мировой опыт и привлекая современных дизайнеров и архитекторов к
+                                созданию образа новых территорий</p>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            </section>
+            
+            <section class="section-new">
+                <div class="container">
+                    <div class="row justify-content-md-between align-items-center section-mobile-reverse">
+            
+                        <div class="col-md-5 col-sm-12">
+                            <p class="typography-body2 typography-uppercase typography-bold mb22">ЯРКИЕ ЭМОЦИИ И ВПЕЧАТЛЕНИЯ</p>
+                            <p class="typography-body2 mb65">Гармоничное сочетание интерьеров и природы вдохновляет, настраивая на
+                                безмятежный лад с самой первой минуты. Продуманная и разнообразная инфраструктура развлечений
+                                формирует культуру осознанной жизни, наполненной яркими событиями.</p>
+            
+                            <p class="typography-body2 typography-uppercase typography-bold mb22">ЗДОРОВАЯ СРЕДА</p>
+                            <p class="typography-body2 mb65">Комплексная система заботы о здоровье гостей MANTERA, включает системы
+                                очистки воды и воздуха, программы функциональной медицины и физической активности, а также контроль
+                                качества питания, включая собственное производство экологически чистых продуктов.</p>
+            
+                            <p class="typography-body2 typography-uppercase typography-bold mb22">ЭКОЛОГИЧЕСКАЯ ОТВЕТСТВЕННОСТЬ</p>
+                            <p class="typography-body2">MANTERA обладает огромным опытом гармоничного развития туристической
+                                инфраструктуры вблизи охраняемых природных территорий.</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 section-image">
+                            <div class="section-image__inner" style="background-image: url('../assets/images/photo3.png');"></div>
+                        </div>
+                    </div>
+            
+            </section>
+            
+            <section id="assets" class="section-new section-new--projects">
+                <div class="container">
+                    <div>
+                        <div class="section-title-right">
+                            <span class="section-title-right__span">
+                                Активы
+                                <hr class="section-title-right__hr" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="links-list__mask"></div>
+                    <div class="row align-items-center justify-content-md-start">
+            
+                        <div id="actives_item_1" class="modal-custom">
+                            <div class="modal-custom__content news-item">
+                                <div class="modal-custom__header">
+                                    <button class="modal-custom__close" type="button">
+                                        <img src="/assets/images/times.svg" alt="close">
+                                    </button>
+                                </div>
+                                <div>
+                                    <p class="typography-body2">
+                                        Курорт Красная Поляна - всесезонный горный курорт развлечений, расположенный в предгорьях
+                                        Главного Кавказского хребта. Курорт предлагает самый современный отдых для разной целевой
+                                        аудитории. Развитая инфраструктура Курорта Красная Поляна объединяет 9 отелей в том числе
+                                        известных международных цепочек Rixos, Marriott, Novotel, Ibis, собственный комплекс
+                                        апартаментов премиального уровня, торгово- развлекательный центр и казино, десятки
+                                        ресторанов, SPA центры, аквапарк, парки аттракционов, скейт -парки и многое другое.
+                                        Неоднократный обладатель престижных наград и премий.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="actives_item_2" class="modal-custom">
+                            <div class="modal-custom__content news-item">
+                                <div class="modal-custom__header">
+                                    <button class="modal-custom__close" type="button">
+                                        <img src="/assets/images/times.svg" alt="close">
+                                    </button>
+                                </div>
+                                <div>
+                                    <p class="typography-body2">
+                                        Курорт Красная Поляна - всесезонный горный курорт развлечений, расположенный в предгорьях
+                                        Главного Кавказского хребта. Курорт предлагает самый современный отдых для разной целевой
+                                        аудитории. Развитая инфраструктура Курорта Красная Поляна объединяет 9 отелей в том числе
+                                        известных международных цепочек Rixos, Marriott, Novotel, Ibis, собственный комплекс
+                                        апартаментов премиального уровня, торгово- развлекательный центр и казино, десятки
+                                        ресторанов, SPA центры, аквапарк, парки аттракционов, скейт -парки и многое другое.
+                                        Неоднократный обладатель престижных наград и премий.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="actives_item_3" class="modal-custom">
+                            <div class="modal-custom__content news-item">
+                                <div class="modal-custom__header">
+                                    <button class="modal-custom__close" type="button">
+                                        <img src="/assets/images/times.svg" alt="close">
+                                    </button>
+                                </div>
+                                <div>
+                                    <p class="typography-body2">
+                                        Курорт Красная Поляна - всесезонный горный курорт развлечений, расположенный в предгорьях
+                                        Главного Кавказского хребта. Курорт предлагает самый современный отдых для разной целевой
+                                        аудитории. Развитая инфраструктура Курорта Красная Поляна объединяет 9 отелей в том числе
+                                        известных международных цепочек Rixos, Marriott, Novotel, Ibis, собственный комплекс
+                                        апартаментов премиального уровня, торгово- развлекательный центр и казино, десятки
+                                        ресторанов, SPA центры, аквапарк, парки аттракционов, скейт -парки и многое другое.
+                                        Неоднократный обладатель престижных наград и премий.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="actives_item_4" class="modal-custom">
+                            <div class="modal-custom__content news-item">
+                                <div class="modal-custom__header">
+                                    <button class="modal-custom__close" type="button">
+                                        <img src="/assets/images/times.svg" alt="close">
+                                    </button>
+                                </div>
+                                <div>
+                                    <p class="typography-body2">
+                                        Курорт Красная Поляна - всесезонный горный курорт развлечений, расположенный в предгорьях
+                                        Главного Кавказского хребта. Курорт предлагает самый современный отдых для разной целевой
+                                        аудитории. Развитая инфраструктура Курорта Красная Поляна объединяет 9 отелей в том числе
+                                        известных международных цепочек Rixos, Marriott, Novotel, Ibis, собственный комплекс
+                                        апартаментов премиального уровня, торгово- развлекательный центр и казино, десятки
+                                        ресторанов, SPA центры, аквапарк, парки аттракционов, скейт -парки и многое другое.
+                                        Неоднократный обладатель престижных наград и премий.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1 section-montera-vertical"></div>
+            
+                        <div class="links-list col-md-3 col-sm-12">
+                            <div data-tab-link="1"
+                                class="links-list__item typography-body typography-uppercase links-list__item--active">ski resorts
+                            </div>
+                            <div data-tab-link="2" class="links-list__item typography-body typography-uppercase">park resorts</div>
+                            <div data-tab-link="3" class="links-list__item typography-body typography-uppercase">gaming resorts
+                            </div>
+                            <div data-tab-link="4" class="links-list__item typography-body typography-uppercase">gourmet</div>
+                            <div data-tab-link="5" class="links-list__item typography-body typography-uppercase">development</div>
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12 tabs-items">
+                            <div data-tab="1">
+                                <div class="slider-cards">
+                                    <div class="assets__list-item">
+                                        <div class="assets__list-item-header">
+                                            <img src="../assets/images/activ/svg/kp.svg" width="90%" alt="">
+                                        </div>
+                                        <div class="assets__list-item-text typography-body2">
+                                            <p class=" truncate-row truncate-row-9">Горный курорт развлечений Красная
+                                                Поляна расположен в предгорье Главного Кавказского хребта. Высокий уровень сервиса,
+                                                архитектурная утонченность и живописные пейзажи природного заповедника каждый год
+                                                привлекают на курорт сотни тысяч туристов со всего мира.</p>
+                                            <a class="news-list__link news-list__link--new pt-2" href="javascript:void(0)"
+                                                data-modal="actives_item_1">Подробнее</a>
+                                        </div>
+                                    </div>
+            
+                                    <!-- <div class="assets__list-item">
+                                        <div class="assets__list-item-header">
+                                            <img src="../assets/images/activ/svg/lagonaki.svg" width="90%" alt="">
+                                        </div>
+                                        <div class="assets__list-item-text typography-body2">
+                                            <p class=" truncate-row truncate-row-9">Комплексная система заботы о здоровье
+                                                гостей MANTERA, включает системы очистки воды и воздуха, программы функциональной
+                                                медицины и
+                                                физической активности, а также контроль качества питания, включая собственное
+                                                производство
+                                                экологически чистых продуктов.</p>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+            
+                            <div data-tab="2">
+                                <div class="slider-cards">
+                                    <div class="assets__list-item">
+                                        <div class="assets__list-item-header"
+                                            style="background-image: url('../assets/images/logos/sochipark.png');"></div>
+                                        <div class="assets__list-item-text typography-body2">
+                                            <p class=" truncate-row truncate-row-9">Первый тематический парк
+                                                страны и один из наиболее мощных магнитов, притягивающих в Сочи туристов со всего
+                                                мира.
+                                                На протяжении семи лет он подтверждает звание лучшего в стране и СНГ открытого
+                                                развлекательного парка с количеством посетителей свыше миллиона человек в год, а в
+                                                2016
+                                                году вошел в топ-25 лучших парков Европы.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-tab="3">
+                                <div class="slider-cards">
+                                    <div class="assets__list-item">
+                                        <div class="assets__list-item-header">
+                                            <img src="../assets/images/activ/svg/gaming.svg" width="90%" alt="">
+                                        </div>
+                                        <div class="assets__list-item-text typography-body2">
+                                            <p class=" truncate-row truncate-row-9">Игорная зона «Красная Поляна» — единый
+                                                культурно-развлекательный центр с полным спектром вариантов отдыха и развлечений. С
+                                                момента открытия первого казино в Красной Поляне в 2017 году гостями игорной зоны
+                                                стали
+                                                более 2,5 млн человек из 170 стран мира.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-tab="4">
+                                <div class="slider-cards">
+                                    <div class="assets__list-item">
+                                        <div class="assets__list-item-header"
+                                            style="background-image: url('../assets/images/logos/chateau.png');"></div>
+                                        <div class="assets__list-item-text typography-body2">
+                                            <p class=" truncate-row truncate-row-9">Château de Talu основано в 2005 году.
+                                                Это современная и одна из самых живописных виноделен Краснодарского края, которая
+                                                производит классические элегантные вина в уникальном терруаре Геленджика. 101,3
+                                                гектаров
+                                                виноградников и собственный ресторан французской и локальной Черноморской кухни,
+                                                с видом на море.</p>
+                                            <a class="news-list__link news-list__link--new pt-2" href="javascript:void(0)"
+                                                data-modal="actives_item_2">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="assets__list-item">
+                                        <div class="assets__list-item-header"
+                                            style="background-image: url('../assets/images/logos/fish.png');"></div>
+                                        <div class="assets__list-item-text typography-body2">
+                                            <p class=" truncate-row truncate-row-9">Форелевое хозяйство в Адлере находится
+                                                в селе Казачий Брод на берегу реки Мзымта. Всего на территории хозяйства расположено
+                                                111
+                                                небольших прудов (ширина — 10 метров, дина — 100 метров, глубина — 1,5 метра).
+                                                Объемы производства — это 600 тонн товарной форели в год. Рыбалка,
+                                                активный отдых, розничная и оптовая продажа.</p>
+                                            <a class="news-list__link news-list__link--new pt-2" href="javascript:void(0)"
+                                                data-modal="actives_item_3">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="assets__list-item">
+                                        <div class="assets__list-item-header"
+                                            style="background-image: url('../assets/images/logos/restaurants.png');"></div>
+                                        <div class="assets__list-item-text typography-body2">
+                                            <p class=" truncate-row truncate-row-9">Более 40 ресторанов расположенных на
+                                                курорте Красная Поляна на высотах 540, 960, 1460 и 2200 метров над уровнем моря.
+                                                Атмосфера, блюда на любой вкус, удобное расположение прекрасно подойдут для отдыха
+                                                после
+                                                активного отдыха. Широкий выбор ассортимента, цен и шаговая доступность на курорте
+                                                «Красная поляна».</p>
+                                            <a class="news-list__link news-list__link--new pt-2" href="javascript:void(0)"
+                                                data-modal="actives_item_4">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-tab="5">
+                                <div class="slider-cards">
+                                    <div class="assets__list-item">
+                                        <div class="assets__list-item-header"
+                                            style="background-image: url('../assets/images/logos/mantera-residence.png');"></div>
+                                        <div class="assets__list-item-text typography-body2">
+                                            <p class=" truncate-row truncate-row-9">На первой линии моря на фоне
+                                                уникального природного ландшафта находится mantera seaview residence. Резиденции в
+                                                сочи
+                                                с видом на горные вершины и морские просторы сохраняют приватность, присущую
+                                                загородным
+                                                владениям.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            
+            
+            
+            </section>
+            
+            <section id="projects" class="section-new section-new--projects">
+                <div class="container">
+            
+                    <div class="section-title-left">
+                        Перспективные проекты
+                    </div>
+            
+                    <div class="projects__items row justify-content-md-center align-content-center">
+                        <div class="projects__item-new col-md-6 projects__item-new--mt80px">
+                            <div class="projects__item-new-logo"
+                                style="background-image: url('../assets/images/activ/svg/mantera_cut.svg');"></div>
+                            <div class="projects__item-new-text typography-body2 typography-uppercase typography-grey">
+                                <div>Год реализации: <span class="typography-h3">2022</span></div>
+                                <div>Инвестиции: <span class="typography-h3">13 МЛРД РУБ.</span></div>
+                            </div>
+                        </div>
+            
+                        <div class="projects__item-new col-md-6">
+                            <div class="projects__item-new-logo"
+                                style="background-image: url('../assets/images/activ/svg/lagonaki_cut.svg');">
+                            </div>
+                            <div class="projects__item-new-text typography-body2 typography-uppercase typography-grey">
+                                <div>Год реализации: <span class="typography-h3">2024</span></div>
+                                <div>Инвестиции: <span class="typography-h3">35 МЛРД РУБ.</span></div>
+                            </div>
+                        </div>
+            
+                        <div class="projects__item-new col-md-6">
+                            <div class="projects__item-new-logo" style="background-image: url('../assets/images/projects/golf.svg');">
+                            </div>
+                            <div class="projects__item-new-text typography-body2 typography-uppercase typography-grey">
+                                <div>Год реализации: <span class="typography-h3">2025</span></div>
+                                <div>Инвестиции: <span class="typography-h3">8 МЛРД РУБ.</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="media" class="section-new">
+                <div class="container">
+                    <div>
+                        <div class="section-title-right">
+                            <span class="section-title-right__span">
+                                Медиа
+                                <hr class="section-title-right__hr" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center align-content-center">
+            
+                        <div class="media-slider col-md-11">
+                            <div class="slider-general-image">
+                                <div style="background-image: url('../assets/images/media/1.jpg')"
+                                    class="slider-general-image__item"></div>
+                                <div style="background-image: url('../assets/images/media/2.jpg')"
+                                    class="slider-general-image__item"></div>
+                                <div style="background-image: url('../assets/images/media/3.jpg')"
+                                    class="slider-general-image__item"></div>
+                                <div style="background-image: url('../assets/images/media/4.jpg')"
+                                    class="slider-general-image__item"></div>
+                                <div style="background-image: url('../assets/images/media/5.jpg')"
+                                    class="slider-general-image__item"></div>
+                                <div style="background-image: url('../assets/images/media/6.jpg')"
+                                    class="slider-general-image__item"></div>
+                            </div>
+            
+                            <div class="slider-navigation">
+                                <div style="background-image: url('../assets/images/media/1.jpg')" class="slider-navigation__item">
+                                </div>
+                                <div style="background-image: url('../assets/images/media/2.jpg')" class="slider-navigation__item">
+                                </div>
+                                <div style="background-image: url('../assets/images/media/3.jpg')" class="slider-navigation__item">
+                                </div>
+                                <div style="background-image: url('../assets/images/media/4.jpg')" class="slider-navigation__item">
+                                </div>
+                                <div style="background-image: url('../assets/images/media/5.jpg')" class="slider-navigation__item">
+                                </div>
+                                <div style="background-image: url('../assets/images/media/6.jpg')" class="slider-navigation__item">
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer-new">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                            <!-- <div class="footer-new__logo"></div> -->
+                            <div class="typography-body2 typography-bold typography-uppercase mb22">Контакты</div>
+                            <div class="typography-body2 mb22">Юридический адрес: 354340, Россия, Краснодарский край, г. Сочи, проспект континентальный, дом 6, офис 1</div>
+                            <div class="typography-body2 mb22">E-mail: info@mantera-group.com</div>
+                            <div class="typography-body2 typography-bold typography-uppercase mb22">ПРЕСС-СЛУЖБА КОМПАНИИ MANTERA</div>
+                            <div class="typography-body2 mb22">E-mail: pr@mantera-group.com</div>
+                            <div class="row">
+                                <div class="col-md-6 col-12 mb22">
+                                    <button class="btn btn--yellow btn--w100" type="button" data-modal="fm_question">Задать вопрос</button>
+                                </div>
+                            </div>
+                            
+                            <div class="footer__social-list">
+                                <a class="footer__social-item"
+                                    style="background-image: url('../assets/images/social/fb.png');"></a>
+                                <a class="footer__social-item"
+                                    style="background-image: url('../assets/images/social/inst.png');"></a>
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-new__photo"></div>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="footer__hr">
+                        <div class="typography-body2 typography-bold">&copy; 2021 MANTERA</div>
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+        
+        <button class="arrow-up" id="buttonUp" title="Меню">
+            <img src="/assets/images/up.svg" alt="меню">
+        </button>
+        
+        <div class="modal-custom" id="fm_question">
+            <div class="modal-custom__content modal-custom__content--white">
+                <div class="modal-custom__header pb-5">
+                    <button class="modal-custom__close" type="button">
+                        <img src="/assets/images/times.svg" alt="close">
+                    </button>
+                    <img class="modal-custom__logo" src="/assets/images/logos/logo_mantera.svg" height="18px" />
+                    <!-- <h3 class="modal-custom__subtitle">Задайте нам любой интересующий вас вопрос в поле комментарий</h3> -->
+                </div>
+                <form class="form-custom" name="fm_question" data-name="question" data-title="Задать вопрос" action="/" method="POST">
+                    <div class="message">
+                        <div class="message__form">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group">
+                                        <label for="name">Имя: <span class="required">*</span></label>
+                                        <input name="name" class="form-custom__input" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group">
+                                        <label for="name">Фамилия: <span class="required">*</span></label>
+                                        <input name="last_name" class="form-custom__input" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group form-custom__group--last">
+                                        <label for="name">Телефон: <span class="required">*</span></label>
+                                        <input name="phone" class="form-custom__input" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group form-custom__group--last">
+                                        <label for="name">E-mail: <span class="required">*</span></label>
+                                        <input name="email" class="form-custom__input" type="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="name">Ваш вопрос: <span class="required">*</span></label>
+                                <textarea name="comment" class="form-custom__textarea" type="text" required></textarea>
+                            </div>
+                            <div class="form-custom__footer form-custom__footer--center">
+                                <div class="form-custom__policy">
+                                    Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку <a target="_blank" href="/policy.html">персональных данных</a>
+                                </div>
+                                <input type="submit" class="btn btn--yellow btn--w50" value="Отправить" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            // function setMask(elm) {
+            //     MaskedInput({
+            //         elm,
+            //         format: '+7 (___) ___-__-__',
+            //         separator: '+7 (   )-'
+            //     });
+            // }
+        
+            // window.onload = function () {
+            //     var inputPhone = document.querySelectorAll('input[name=phone]')
+        
+            //     inputPhone.forEach(input => {
+            //         setMask(input)
+            //         input.addEventListener("change", setMask)
+            //     });
+            // }
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                $("input[name=phone]").mask("+7 (999) 999 9999");
+            })
+        </script>    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <script src="/assets/js/app.js"></script>
+</body>
+</html>

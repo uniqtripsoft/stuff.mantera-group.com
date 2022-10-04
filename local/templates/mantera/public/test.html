@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <!-- <meta name="format-detection" content="telephone=no"> -->
+    <meta name="description" content="">
+    
+    <title>Календарь мероприятий</title>
+</head>
+<body>
+
+    <div class="page calendar">
+        
+        <div class="header-phantom"></div>
+        <header id="header" class="header">
+            <div class="container">
+                <div class="header__inner header__inner--new">
+                    <div class="header__logo header__logo--new">
+                        <a href="/">
+                            <img src="/assets/images/logos/logo_mantera.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="header__center">
+                        <p class="header__title">КАЛЕНДАРЬ МЕРОПРИЯТИЙ ДЛЯ СОТРУДНИКОВ ХОЛДИНГА</p>
+                    </div>
+        
+                    <div class="header-right">
+                        <ul class="nav nav--new nav--languages">
+                            <li class="nav__item nav__item--new"><span class="language-toggler">ru</span> / <span
+                                    class="language-toggler">eng</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main -->
+        <main class="main main--new">
+            
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                       <div id="multiselect"></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+            <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+            <!-- <script type="text/javascript" src="/assets/js/vendor/select2.min.js"></script> -->
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script> -->
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+            <script>
+                document.addEventListener("DOMContentLoaded", function(){
+                    const multi = new MultiselectUI('#multiselect', {
+                        placeholder: 'Выберите элемент',
+                        name: 'test',
+                        // selectedId: '2',
+                        data: [
+                            {id: '1', value: '10:00 Школа покера', dataProp: '10-12-2021, 20-12-2021'},
+                            {id: '2', value: '11:00 Школа покера', dataProp: '10-12-2021, 20-12-2021'},
+                            {id: '3', value: '12:00 Школа покера', dataProp: '11-12-2021, 21-12-2021'},
+                            {id: '4', value: '10:00 Школа покера', dataProp: '12-12-2021, 22-12-2021'},
+                            {id: '5', value: '10:00 Школа покера', dataProp: '13-12-2021, 23-12-2021'},
+                            {id: '6', value: '10:00 Школа покера', dataProp: '14-12-2021, 24-12-2021'},
+                        ],
+                            onSelect(item){
+                            console.log('selected Item', item)
+                        }
+                    })
+                })
+            </script>
+            
+        </main>
+
+        <footer class="footer-new">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                            <!-- <div class="footer-new__logo"></div> -->
+                            <div class="typography-body2 typography-bold typography-uppercase mb22">Контакты</div>
+                            <div class="typography-body2 mb22">Юридический адрес: 354340, Россия, Краснодарский край, г. Сочи, проспект континентальный, дом 6, офис 1</div>
+                            <div class="typography-body2 mb22">E-mail: info@mantera-group.com</div>
+                            <div class="typography-body2 typography-bold typography-uppercase mb22">ПРЕСС-СЛУЖБА КОМПАНИИ MANTERA</div>
+                            <div class="typography-body2 mb22">E-mail: pr@mantera-group.com</div>
+                            <div class="row">
+                                <div class="col-md-6 col-12 mb22">
+                                    <button class="btn btn--yellow btn--w100" type="button" data-modal="fm_question">Задать вопрос</button>
+                                </div>
+                            </div>
+                            
+                            <div class="footer__social-list">
+                                <a class="footer__social-item"
+                                    style="background-image: url('../assets/images/social/fb.png');"></a>
+                                <a class="footer__social-item"
+                                    style="background-image: url('../assets/images/social/inst.png');"></a>
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-new__photo"></div>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="footer__hr">
+                        <div class="typography-body2 typography-bold">&copy; 2021 MANTERA</div>
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+        
+        <button class="arrow-up" id="buttonUp" title="Меню">
+            <img src="/assets/images/up.svg" alt="меню">
+        </button>
+        
+        <div class="modal-custom" id="fm_question">
+            <div class="modal-custom__content modal-custom__content--white">
+                <div class="modal-custom__header pb-5">
+                    <button class="modal-custom__close" type="button">
+                        <img src="/assets/images/times.svg" alt="close">
+                    </button>
+                    <img class="modal-custom__logo" src="/assets/images/logos/logo_mantera.svg" height="18px" />
+                    <!-- <h3 class="modal-custom__subtitle">Задайте нам любой интересующий вас вопрос в поле комментарий</h3> -->
+                </div>
+                <form class="form-custom" name="fm_question" data-name="question" data-title="Задать вопрос" action="/" method="POST">
+                    <div class="message">
+                        <div class="message__form">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group">
+                                        <label for="name">Имя: <span class="required">*</span></label>
+                                        <input name="name" class="form-custom__input" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group">
+                                        <label for="name">Фамилия: <span class="required">*</span></label>
+                                        <input name="last_name" class="form-custom__input" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group form-custom__group--last">
+                                        <label for="name">Телефон: <span class="required">*</span></label>
+                                        <input name="phone" class="form-custom__input" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group form-custom__group--last">
+                                        <label for="name">E-mail: <span class="required">*</span></label>
+                                        <input name="email" class="form-custom__input" type="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="name">Ваш вопрос: <span class="required">*</span></label>
+                                <textarea name="comment" class="form-custom__textarea" type="text" required></textarea>
+                            </div>
+                            <div class="form-custom__footer form-custom__footer--center">
+                                <div class="form-custom__policy">
+                                    Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку <a target="_blank" href="/policy.html">персональных данных</a>
+                                </div>
+                                <input type="submit" class="btn btn--yellow btn--w50" value="Отправить" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            // function setMask(elm) {
+            //     MaskedInput({
+            //         elm,
+            //         format: '+7 (___) ___-__-__',
+            //         separator: '+7 (   )-'
+            //     });
+            // }
+        
+            // window.onload = function () {
+            //     var inputPhone = document.querySelectorAll('input[name=phone]')
+        
+            //     inputPhone.forEach(input => {
+            //         setMask(input)
+            //         input.addEventListener("change", setMask)
+            //     });
+            // }
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                $("input[name=phone]").mask("+7 (999) 999 9999");
+            })
+        </script>    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/datepicker.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/select2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/multiselect-ui.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+</body>
+</html>

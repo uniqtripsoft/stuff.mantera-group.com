@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <!-- <meta name="format-detection" content="telephone=no"> -->
+    <meta name="description" content="">
+    
+    <title>Mantera</title>
+</head>
+<body>
+
+    <div class="page">
+        
+        <div class="header-phantom"></div>
+        <header id="header" class="header">
+            <div class="container">
+                <div class="header__inner header__inner--new">
+                    <!-- <div class="nav-burger">
+                        <button class="burger" type="button" onclick="openNav()">
+                            <span class="burger__item">Menu</span>
+                        </button>
+                    </div> -->
+                    <div class="nav-burger">
+                        <div id="nav_burger__open" class="nav-burger__open" onclick="openNav()"></div>
+                        <div id="nav_burger__close" class="nav-burger__close" onclick="closeNav()"></div>
+                    </div>
+                    <div class="header__logo header__logo--new">
+                        <a href="/">
+                            <img src="/assets/images/logos/logo_mantera.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="header__center">
+                        <nav class="nav nav--new" id="nav">
+                            <ul class="nav__list nav__list--new">
+                                <li class="nav__item nav__item--new">
+                                    <a href="/#news" class="nav__link nav__link--new">Новости</a>
+                                </li>
+                                <li class="nav__item nav__item--new">
+                                    <a href="/#about" class="nav__link nav__link--new">О компании</a>
+                                </li>
+                                <li class="nav__item nav__item--new">
+                                    <a href="/#assets" class="nav__link nav__link--new">Активы</a>
+                                </li>
+                                <li class="nav__item nav__item--new">
+                                    <a href="/#solutions" class="nav__link nav__link--new">Экспертные решения</a>
+                                </li>
+                                <li class="nav__item nav__item--new">
+                                    <a href="/#projects" class="nav__link nav__link--new">Перспективные проекты</a>
+                                </li>
+                                <li class="nav__item nav__item--new">
+                                    <a href="/#media" class="nav__link nav__link--new">Медиа</a>
+                                </li>
+                            </ul>
+                        </nav>
+        
+                    </div>
+        
+                    <div class="header-right">
+                        <ul class="nav nav--new nav--languages">
+                            <li class="nav__item nav__item--new"><span class="language-toggler">ru</span> / <span
+                                    class="language-toggler">eng</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="sidepanel_mobile" class="sidepanel">
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+            <a href="#news"><span>Новости</span></a>
+            <a href="#about"><span>О компании</span></a>
+            <a href="#assets"><span>Активы</span></a>
+            <a href="#solutions"><span>Экспертные решения</span></a>
+            <a href="#projects"><span>Перспективные проекты</span></a>
+            <a href="#media"><span>Медиа</span></a>
+        </div>
+        <script>
+                var sidepanel = document.getElementById("sidepanel_mobile"),
+                    nav_open = document.getElementById("nav_burger__open"),
+                    nav_close = document.getElementById("nav_burger__close"),
+                    menu_items = sidepanel.querySelectorAll("a");
+        
+                function transformMenu(open = true) {
+                    sidepanel.style.left = open ? "0" : "-300px";
+                    nav_open.style.opacity = open ? "0" : "1";
+                    nav_close.style.opacity = open ? "1" : "0";
+                    nav_open.style.visibility = open ? "hidden" : "visible";
+                    nav_close.style.visibility = open ? "visible" : "hidden";
+                }
+        
+                menu_items.forEach(item => item.addEventListener("click", closeNav))
+        
+                /* Set the width of the sidebar to 300px (show it) */
+                function openNav() {
+                    transformMenu(true)
+                }
+        
+                /* Set the width of the sidebar to 0 (hide it) */
+                function closeNav() {
+                    transformMenu(false)
+                }
+                // $(".menuBoxAdapt").click(function () {
+                //     openNav()
+                // })
+        </script>
+        <!-- Main -->
+        <main class="main main--new">
+            
+            <div class="section-bg">
+            </div>
+            
+            <section class="section section--news" id="news">
+                <div class="section-yellow-block"></div>
+                <div class="container">
+                    <div class="news">
+                        <div class="row justify-content-between">
+                            <div class="col-md-4">
+                                <div class="section__header">
+                                    <h2 class="section-title section-title--news">Новости</h2>
+                                </div>
+                                <div class="news-list">
+                                   <div class="news-list__item">
+                                        <h3 class="news-list__title">1.09.2021</h3>
+                                        <p class="news-list__text news-list__text--bold">
+                                            Курорт Красная Поляна проведёт открытую тренировку на горных велосипедах в преддверии Enduro Words Series
+                                        </p>
+                                        <p class="news-list__text news-list__text">
+                                            C 15 по 18 сентября на Курорте Красная Поляна впервые состоится открытая тренировка росскийского этап...
+                                        </p>
+                                        <a class="news-list__link" href="#">Подробнее</a>
+                                   </div>
+                                   <div class="news-list__item">
+                                        <h3 class="news-list__title">1.09.2021</h3>
+                                        <p class="news-list__text news-list__text--bold">
+                                            В Краснодарском крае вступили в силу новые требования к туристам.
+                                        </p>
+                                        <a class="news-list__link" href="#">Подробнее</a>
+                                    </div>
+                                    <div class="news-list__item">
+                                        <h3 class="news-list__title">1.09.2021</h3>
+                                        <p class="news-list__text news-list__text--bold">
+                                            Аксенов назвал число отдохнувших в Крыму с начала года туристов.
+                                        </p>
+                                        <a class="news-list__link" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <img class="news__img" src="/assets/images/news.png" alt="">
+                            </div>
+                        </div>
+                    </div><!-- /.news -->
+                </div><!-- /.container -->
+                <div class="section-yellow-block section-yellow-block--sm"></div>
+            </section><!-- /.section news -->
+            
+            <section class="section section--about" id="about">
+                <div class="container">
+                   <div class="row">
+                       <div class="col">
+                            <div class="section__header section__header--about">
+                                <h2 class="section-title section-title--about">О компании</h2>
+                            </div>   
+                            <div class="about">
+                                <div class="about__inner">
+                                    <p class="about__text">
+                                        MANTERA — управляющая компания, созданная в 2021 году для объединения лучших курортов и центров притяжения России в единую экосистему впечатлений. 
+                                    </p>
+                                    <p class="about__text">
+                                        Ключевые направления деятельности MANTERA — развитие туристических дестинаций, девелопмент, управление отелями в партнерстве с глобальными сетевыми брендами, разработка и внедрение новых стандартов гостеприимства.
+                                    </p>
+                                    <p class="about__text">
+                                        Развивая лучшие мировые практики в сфере гостеприимства, MANTERA разработала экспертную систему управления, которая позволяет эффективно масштабировать бизнес с неизменно высоким качеством сервиса.
+                                    </p>
+                                    <p class="about__text">
+                                        Каждый проект экосистемы MANTERA — это синергия яркого эмоционального опыта наших гостей, передовых технологий сервиса, высокой эстетики пространств, экологичности и заботы о здоровье.
+                                    </p>
+                                </div>
+                            </div><!-- /.about -->
+                       </div><!-- /.col -->
+                   </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section><!-- /.section about -->
+            
+            <section class="section section--facts" id="facts">
+                <div class="container">
+                   <div class="row justify-content-between">
+                        <div class="col-md-6">
+                            <div class="section__header">
+                                <h2 class="section-title section-title--facts">Цифры и факты: MANTERA</h2>
+                            </div>
+                            <div class="facts-list">
+                            <div class="facts-list__item">
+                                    <div class="facts-list__text">Год оcнования</div>
+                                    <div class="facts-list__text facts-list__text--bold">2021</div>
+                            </div>
+                            <div class="facts-list__item">
+                                    <div class="facts-list__text">Планируемые инвестиции (2021–2025 гг.)</div>
+                                    <div class="facts-list__text facts-list__text--bold">100 млрд руб.</div>
+                                </div>
+                                <div class="facts-list__item">
+                                    <div class="facts-list__text">Оборот</div>
+                                    <div class="facts-list__text facts-list__text--bold">20 млрд руб.</div>
+                                </div>
+                                <div class="facts-list__item">
+                                    <div class="facts-list__text">Число сотрудников</div>
+                                    <div class="facts-list__text facts-list__text--bold">6 000 чел.</div>
+                                </div>
+                                <div class="facts-list__item">
+                                    <div class="facts-list__text">Посещаемость (2020 г.)</div>
+                                    <div class="facts-list__text facts-list__text--bold">3 000 000 чел.</div>
+                                </div>
+                                <div class="facts-list__item">
+                                    <div class="facts-list__text">Номерной фонд</div>
+                                    <div class="facts-list__text facts-list__text--bold">6 000 номеров</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- <div class="facts-img"></div> -->
+                            <img class="facts__img" src="/assets/images/facts.png" alt="facts">
+                        </div>
+                   </div>
+                </div><!-- /.container -->
+            </section><!-- /.section facts -->
+            
+            <section class="section section--solutions" id="solutions">
+                <div class="container">
+                    <div class="section__header section__header--left-line">
+                        <h2 class="section-title section-title--left-line">ЭКСПЕРТНЫЕ РЕШЕНИЯ</h2>
+                    </div>
+                    <div class="row solutions justify-content-between">
+                        <div class="col-lg-3 solutions-relative">
+                            <img class="solutions__img solutions__img--first" src="/assets/images/solutions/solutions-01.png" alt="solutions-01">
+                        </div>
+                        <div class="col-70">
+                            <div class="solutions-content">
+                                <div class="row solutions-content__inner">
+                                    <div class="col-md-6">
+                                        <div class="solutions-content__text-block">
+                                            <div class="solutions-content__title">
+                                                Цифровой сервис
+                                            </div>
+                                            <div class="solutions-content__text">
+                                                MANTERA разработала и успешно применяет собственную цифровую систему управления гостеприимством, которая позволяет максимизировать как эффективность бизнес-модели, так и уровень удовлетворённости гостей.
+                                            </div>
+                                        </div>
+                                        <div class="solutions-content__text-block">
+                                            <div class="solutions-content__title">
+                                                Комплексное развитие
+                                            </div>
+                                            <div class="solutions-content__text">
+                                                За каждым проектом MANTERA стоит продуманный сценарий consumer journey, что позволяет наиболее эффективно использовать возможности каждой территории и предложить разнообразие сервисов, охватывающие все сегменты потенциальной аудитории.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img" src="/assets/images/solutions/solutions-02.png" alt="solutions-02">
+                                        <div class="solutions-content__text-block solutions-content__text-block--mb28">
+                                            <div class="solutions-content__title solutions-content__title--pt40">
+                                                Эстетика пространства
+                                            </div>
+                                            <div class="solutions-content__text">
+                                                Команда MANTERA уделяет особое внимание архитек- туре и благоустройству территории, используя лучший мировой опыт и привлекая современных дизайнеров и архитекторов к созданию образа новых территорий
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 pos-relative">
+                        </div>
+                        <div class="col-xl-4 col-lg-6">
+                            <!-- <img class="img img-w95 img-h100 solutions__img solutions__img--second" src="/assets/images/solutions/solutions-04.png" alt="solutions-04"> -->
+                            <div class="solutions__bg"></div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="solutions-content__wrapper">
+                                <div class="solutions-content__text-block">
+                                    <div class="solutions-content__title">
+                                        Яркие эмоции и впечатления
+                                    </div>
+                                    <div class="solutions-content__text">
+                                        Гармоничное сочетание интерьеров и природы вдохновляет, настраивая на безмятежный лад с самой первой минуты. Продуманная и разнообразная инфраструктура развлечений формирует культуру осознанной жизни, наполненной яркими событиями. 
+                                    </div>
+                                </div>
+                                <div class="solutions-content__text-block">
+                                    <div class="solutions-content__title">
+                                        Здоровая среда
+                                    </div>
+                                    <div class="solutions-content__text">
+                                        Комплексная система заботы о здоровье гостей MANTERA, включает системы очистки воды и воздуха, программы функциональной медицины и физической активности, а также контроль качества питания, включая собственное производство экологически чистых продуктов.
+                                    </div>
+                                </div>
+                                <div class="solutions-content__text-block">
+                                    <div class="solutions-content__title">
+                                        Экологическая ответственность
+                                    </div>
+                                    <div class="solutions-content__text">
+                                        MANTERA обладает огромным опытом гармоничного развития туристической инфраструктуры вблизи охраняемых природных территорий.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div><!-- /.container -->
+            </section><!-- /.section solutions -->
+            
+            <section class="section section--assets" id="assets">
+                <div class="container">
+                    <div class="section__header section__header--left-lines">
+                        <h2 class="section-title section-title--left-line">АКТИВЫ</h2>
+                    </div>
+                    <div class="assets">
+                        <div class="row assets-row justify-content-between">
+                            <div class="col-xl-2 col-lg-6">
+                                <a class="assets__link" href="https://krasnayapolyanaresort.ru/">
+                                    <div class="assets__item assets__item--bg">
+                                        <h3 class="assets__title">Ski Resorts</h3>
+                                        <div class="assets__img-wrapper">
+                                            <img class="assets__img" src="/assets/images/activ/activ-1.png" alt="activ">
+                                        </div>
+                                    </div>  
+                                </a>
+                            </div>
+                            <div class="col-xl-2 col-lg-6">
+                                <a class="assets__link" href="https://www.sochipark.ru/">
+                                    <div class="assets__item">
+                                        <h3 class="assets__title">Park Resorts</h3>
+                                        <div class="assets__img-wrapper">
+                                            <img class="assets__img assets__img--second" src="/assets/images/activ/activ-2.png" alt="activ">
+                                        </div>
+                                    </div>  
+                                </a>
+                            </div>
+                            <div class="col-xl-2 col-lg-6">
+                                <a class="assets__link" href="https://casinosochi.ru/">
+                                    <div class="assets__item">
+                                        <h3 class="assets__title">Gaming Resort</h3>
+                                        <div class="assets__img-wrapper">
+                                            <img class="assets__img assets__img--pt18" src="/assets/images/activ/activ-3.png" alt="activ">
+                                        </div>
+                                    </div>  
+                                 </a>
+                            </div>
+                            <div class="col-xl-2 col-lg-6">
+                                <a class="assets__link" href="#">
+                                    <div class="assets__item">
+                                        <h3 class="assets__title assets__title--logo">Gourmet</h3>
+                                        <div class="assets__logos">
+                                            <a class="assets__link" href="assets__link">
+                                                <img class="assets__item" src="/assets/images/activ/trout-farming.png" alt="trout-farming">
+                                            </a>
+                                            <a class="assets__link" href="https://chateaudetalu.ru/">
+                                                <img class="assets__item assets__item--second" src="/assets/images/activ/activ-4.png" alt="activ">
+                                            </a>
+                                            <a class="assets__link" href="assets__link">
+                                                <img class="assets__item" src="/assets/images/activ/Restaurants.png" alt="Restaurants">
+                                            </a>
+                                        </div>
+                                    </div>  
+                                </a>
+                            </div>
+                            <div class="col-xl-2 col-lg-6">
+                                <a class="assets__link" href="https://mantera-residence.ru/">
+                                    <div class="assets__item">
+                                        <h3 class="assets__title">development</h3>
+                                        <div class="assets__img-wrapper">
+                                            <img class="assets__img assets__img--pt30" src="/assets/images/activ/activ-5.png" alt="activ">
+                                        </div>
+                                    </div>  
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.container -->
+            </section><!-- /.section assets -->
+            
+            <section class="section section--projects" id="projects">
+                <div class="container">
+                    <div class="section__header section__header--left-lines">
+                        <h2 class="section-title section-title--left-line">Перспективные проекты</h2>
+                    </div>
+                    <div class="projects">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-4">
+                                <div class="projects__item">
+                                    <a class="projects__link" href="https://mantera-residence.ru/">
+                                        <div class="projects-wrapper">
+                                            <img class="projects__img" src="/assets/images/projects/project-1.png" alt="project.png">
+                                        </div>
+                                        <div class="project-text-block project-text-block--first">
+                                            <div class="projects__text">Год открытия: 2024</div>
+                                            <div class="projects__text">
+                                                Планируемые инвестиции: 
+                                                более 13 млрд руб.
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="projects__item">
+                                    <a class="projects__link" href="https://mantera-residence.ru/">
+                                        <div class="projects-wrapper">
+                                            <img class="projects__img" src="/assets/images/projects/project-2.png" alt="project.png">
+                                        </div>
+                                        <div class="project-text-block project-text-block--second">
+                                            <div class="projects__text">Год открытия: 2024</div>
+                                            <div class="projects__text">
+                                                Планируемые инвестиции (2022–2025 гг.): 
+                                                35 млрд руб.
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="projects__item">
+                                    <a class="projects__link" href="https://mantera-residence.ru/">
+                                        <div class="projects-wrapper">
+                                            <img class="projects__img" src="/assets/images/projects/project-3.png" alt="project.png">
+                                        </div>
+                                        <div class="project-text-block project-text-block--third">
+                                            <div class="projects__text">Год открытия: 2024</div>
+                                            <div class="projects__text">
+                                                Объем инвестиций: 
+                                                8 млрд руб.
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.container -->
+            </section><!-- /.section projects -->
+            
+            <section class="section section--media" id="media">
+                <div class="container">
+                    <div class="section__header section__header--left-lines">
+                        <h2 class="section-title section-title--left-line">Медиа</h2>
+                    </div>
+                    <div class="media">
+                        <div class="media__inner">
+                            <div class="media__item media__item--first">
+                                <div class="media__video">
+                                    <img src="/assets/images/media/media-video.png" alt="">
+                                </div>
+                            </div>
+                            <div class="media__item media__item--second">
+                                <div class="media-photo">
+                                    <div class="media-photo__row">
+                                        <div class="media-photo__item">
+                                            <img src="/assets/images/media/media-01.png" alt="">
+                                        </div>
+                                        <div class="media-photo__item">
+                                            <img src="/assets/images/media/media-02.png" alt="">
+                                        </div>
+                                        <div class="media-photo__item">
+                                            <img src="/assets/images/media/media-03.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="media-photo__row">
+                                        <div class="media-photo__item">
+                                            <img src="/assets/images/media/media-04.png" alt="">
+                                        </div>
+                                        <div class="media-photo__item">
+                                            <img src="/assets/images/media/media-05.png" alt="">
+                                        </div>
+                                        <div class="media-photo__item">
+                                            <img src="/assets/images/media/media-06.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>      
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.container -->
+            </section><!-- /.section media -->
+            
+            <section class="section section--contact" id="contact">
+                <div class="container">
+                    <div class="section__header">
+                        <h2 class="section-title section-title--contact">Контакты</h2>
+                    </div>
+                    <div class="contact__inner">
+                        <div class="contact">
+                            <div class="contact__text">
+                                354340, Краснодарский край, г. Сочи, 
+                                проспект Континентальный, дом 6, офис 1
+                            </div>
+                            <div class="contact__text">
+                               <a href="mailto:info@mantera-group.com">e-mail: info@mantera-group.com</a>
+                            </div>
+                            <div class="contact-social">
+                                <div class="contact-social__item">
+                                    <a class="contact-social__link" href="#">
+                                        <img src="/assets/images/social/instagram.png" alt="instagram">
+                                    </a>
+                                </div>
+                                <div class="contact-social__item">
+                                    <a class="contact-social__link" href="#">
+                                        <img src="/assets/images/social/facebook.png" alt="facebook">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.container -->
+            </section><!-- /.section contact -->
+            
+            <div class="container">
+                <div class="feedback">
+                    <button class="feedback__btn" type="button" data-modal="feedback-modal">Обратная связь</button>
+                </div>
+            </div><!-- /.container -->
+            
+            
+            <!-- Modal -->
+            <div class="modal-custom" id="feedback-modal">
+                <div class="modal-custom__content">
+                    <button class="modal-custom__close" type="button">
+                        <img src="/assets/images/close.svg" alt="close">
+                    </button>
+                    <h1 class="modal-custom__title">Написать сообщение | send</h1>
+                    <form class="form-custom" action="/" method="POST">
+                        <div class="message">
+                            <div class="message__form">
+                                <div class="form-custom__group">
+                                    <input class="form-custom__control" type="text" placeholder="имя | name" required>
+                                </div>
+                                <div class="form-custom__group">
+                                    <input class="form-custom__control" type="tel" placeholder="телефон | phone" required>
+                                </div>
+                                <div class="form-custom__group form-custom__group--last">
+                                    <input class="form-custom__control" type="email" placeholder="почта | e-mail" required>
+                                </div>
+                                <div class="form-custom__group">
+                                    <textarea class="message__textarea" type="text" placeholder="сообщение | message" required></textarea>
+                                </div>
+                                <div class="form-custom__footer">
+                                    <div class="form-custom__group">
+                                        <button class="btn btn--yellow w-50">Отправить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer-new">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                            <!-- <div class="footer-new__logo"></div> -->
+                            <div class="typography-body2 typography-bold typography-uppercase mb22">Контакты</div>
+                            <div class="typography-body2 mb22">Юридический адрес: 354340, Россия, Краснодарский край, г. Сочи, проспект континентальный, дом 6, офис 1</div>
+                            <div class="typography-body2 mb22">E-mail: info@mantera-group.com</div>
+                            <div class="typography-body2 typography-bold typography-uppercase mb22">ПРЕСС-СЛУЖБА КОМПАНИИ MANTERA</div>
+                            <div class="typography-body2 mb22">E-mail: pr@mantera-group.com</div>
+                            <div class="row">
+                                <div class="col-md-6 col-12 mb22">
+                                    <button class="btn btn--yellow btn--w100" type="button" data-modal="fm_question">Задать вопрос</button>
+                                </div>
+                            </div>
+                            
+                            <div class="footer__social-list">
+                                <a class="footer__social-item"
+                                    style="background-image: url('../assets/images/social/fb.png');"></a>
+                                <a class="footer__social-item"
+                                    style="background-image: url('../assets/images/social/inst.png');"></a>
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-new__photo"></div>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="footer__hr">
+                        <div class="typography-body2 typography-bold">&copy; 2021 MANTERA</div>
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+        
+        <button class="arrow-up" id="buttonUp" title="Меню">
+            <img src="/assets/images/up.svg" alt="меню">
+        </button>
+        
+        <div class="modal-custom" id="fm_question">
+            <div class="modal-custom__content modal-custom__content--white">
+                <div class="modal-custom__header pb-5">
+                    <button class="modal-custom__close" type="button">
+                        <img src="/assets/images/times.svg" alt="close">
+                    </button>
+                    <img class="modal-custom__logo" src="/assets/images/logos/logo_mantera.svg" height="18px" />
+                    <!-- <h3 class="modal-custom__subtitle">Задайте нам любой интересующий вас вопрос в поле комментарий</h3> -->
+                </div>
+                <form class="form-custom" name="fm_question" data-name="question" data-title="Задать вопрос" action="/" method="POST">
+                    <div class="message">
+                        <div class="message__form">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group">
+                                        <label for="name">Имя: <span class="required">*</span></label>
+                                        <input name="name" class="form-custom__input" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group">
+                                        <label for="name">Фамилия: <span class="required">*</span></label>
+                                        <input name="last_name" class="form-custom__input" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group form-custom__group--last">
+                                        <label for="name">Телефон: <span class="required">*</span></label>
+                                        <input name="phone" class="form-custom__input" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-custom__group form-custom__group--last">
+                                        <label for="name">E-mail: <span class="required">*</span></label>
+                                        <input name="email" class="form-custom__input" type="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="name">Ваш вопрос: <span class="required">*</span></label>
+                                <textarea name="comment" class="form-custom__textarea" type="text" required></textarea>
+                            </div>
+                            <div class="form-custom__footer form-custom__footer--center">
+                                <div class="form-custom__policy">
+                                    Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку <a target="_blank" href="/policy.html">персональных данных</a>
+                                </div>
+                                <input type="submit" class="btn btn--yellow btn--w50" value="Отправить" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            // function setMask(elm) {
+            //     MaskedInput({
+            //         elm,
+            //         format: '+7 (___) ___-__-__',
+            //         separator: '+7 (   )-'
+            //     });
+            // }
+        
+            // window.onload = function () {
+            //     var inputPhone = document.querySelectorAll('input[name=phone]')
+        
+            //     inputPhone.forEach(input => {
+            //         setMask(input)
+            //         input.addEventListener("change", setMask)
+            //     });
+            // }
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                $("input[name=phone]").mask("+7 (999) 999 9999");
+            })
+        </script>    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <script src="/assets/js/app.js"></script>
+</body>
+</html>
