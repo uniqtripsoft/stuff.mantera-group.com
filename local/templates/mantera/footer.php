@@ -96,7 +96,7 @@
                     </div>
                     <div class="form-custom__footer form-custom__footer--center">
                         <div class="form-custom__policy">
-                            Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку <a target="_blank" href="/policy/">персональных данных</a>
+                            Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку <a target="_blank" href="https://mantera-group.com/policy/">персональных данных</a>
                         </div>
                         <input type="submit" class="btn btn--yellow btn--w50" value="Отправить" />
                     </div>
@@ -180,7 +180,7 @@
 					<div class="form-custom__footer form-custom__footer--center">
 						<div class="form-custom__policy form-custom__policy--pd">
 							Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку <a target="_blank"
-								href="/policy/">персональных данных</a>
+								href="https://mantera-group.com/policy/">персональных данных</a>
 						</div>
 						<input type="submit" class="btn btn--yellow btn--w50 btn--h60" value="Отправить" />
 					</div>
