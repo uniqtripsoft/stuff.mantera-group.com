@@ -1,65 +1,67 @@
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");?> 
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.php"); ?> 
 
 <?
-    $from = "";
-    $to = "";
-    
-    if(!empty($_REQUEST["dateBegin"])){
-	    $from = date('d.m.Y', strtotime($_REQUEST["dateBegin"]));
-    }
-    if(!empty($_REQUEST["dateEnd"])){
-	    $to = date('d.m.Y', strtotime($_REQUEST["dateEnd"]));
-    }
-    $NewsFilter = [];
-    
-    if(!empty($from) && empty($to)){
-		$fromNextDay = date('d.m.Y',strtotime($from. "+1 days"));
-        $NewsFilter = [
-			"!PROPERTY_IS_PAST_EVENT_VALUE"=> "Да",
-			[
-				"LOGIC" => "OR",
-				["DATE_ACTIVE_FROM" => $from],
-				[">=DATE_ACTIVE_FROM" => $from, "<DATE_ACTIVE_FROM" => $fromNextDay],
-				["<=DATE_ACTIVE_TO"=>$from, ">=DATE_ACTIVE_FROM" => $from, "!DATE_ACTIVE_FROM" => false, "!DATE_ACTIVE_TO" => false],
-				[">=DATE_ACTIVE_TO"=>$from, "<=DATE_ACTIVE_FROM" => $from, "!DATE_ACTIVE_FROM" => false, "!DATE_ACTIVE_TO" => false],
-			]
-		];
-    }
-    if(!empty($from) && !empty($to)){
-		$NewsFilter = [
-			"!PROPERTY_IS_PAST_EVENT_VALUE"=> "Да",
-			[
-				"LOGIC" => "OR",
-				[">=DATE_ACTIVE_FROM"=>$from, "<=DATE_ACTIVE_FROM"=>$to, "!DATE_ACTIVE_FROM" => false, "DATE_ACTIVE_TO" => false],
-				["<=DATE_ACTIVE_TO"=>$to, ">=DATE_ACTIVE_TO"=>$from, "DATE_ACTIVE_FROM" => false, "!DATE_ACTIVE_TO" => false],
+//$dateFormat = 'd.m.Y';
+$dateFormat = 'm/d/Y';
+$from = "";
+$to = "";
 
-				["<=DATE_ACTIVE_FROM"=>$from, ">=DATE_ACTIVE_TO" => $from, "!DATE_ACTIVE_TO" => false, "!DATE_ACTIVE_FROM" => false],
-				["<=DATE_ACTIVE_FROM"=>$from, "<=DATE_ACTIVE_TO" => $to, ">=DATE_ACTIVE_TO" => $from, "!DATE_ACTIVE_TO" => false, "!DATE_ACTIVE_FROM" => false],
-				[">=DATE_ACTIVE_FROM"=>$from, "<=DATE_ACTIVE_TO" => $to, "!DATE_ACTIVE_TO" => false, "!DATE_ACTIVE_FROM" => false],
-				[">=DATE_ACTIVE_FROM"=>$from, "<=DATE_ACTIVE_FROM"=>$to, ">=DATE_ACTIVE_TO" => $to, "!DATE_ACTIVE_TO" => false, "!DATE_ACTIVE_FROM" => false],
-			]
-		];
-    }
+if (!empty($_REQUEST["dateBegin"])) {
+	$from = date($dateFormat, strtotime($_REQUEST["dateBegin"]));
+}
+if (!empty($_REQUEST["dateEnd"])) {
+	$to = date($dateFormat, strtotime($_REQUEST["dateEnd"]));
+}
+$NewsFilter = [];
 
-	if (empty($from) && empty($to)) {
-		$date = date($DB->DateFormatToPHP(CLang::GetDateFormat("SHORT")), mktime());
-		$NewsFilter = array(	
-			"!PROPERTY_IS_PAST_EVENT_VALUE"=> "Да",
-			[
-				"LOGIC" => "OR",
-				[">=DATE_ACTIVE_TO"=> $date, "!DATE_ACTIVE_TO" => false],
-				["<=DATE_ACTIVE_FROM"=> $date, "!DATE_ACTIVE_TO" => false, ">=DATE_ACTIVE_TO" => $date],
-				[">=DATE_ACTIVE_FROM"=> $date],
-			]
-		);
-	}
-	$GLOBALS['NewsFilter'] = $NewsFilter;
+if (!empty($from) && empty($to)) {
+	$fromNextDay = date($dateFormat, strtotime($from . "+1 days"));
+	$NewsFilter = [
+		"!PROPERTY_IS_PAST_EVENT_VALUE" => "Да",
+		[
+			"LOGIC" => "OR",
+			["DATE_ACTIVE_FROM" => $from],
+			[">=DATE_ACTIVE_FROM" => $from, "<DATE_ACTIVE_FROM" => $fromNextDay],
+			["<=DATE_ACTIVE_TO" => $from, ">=DATE_ACTIVE_FROM" => $from, "!DATE_ACTIVE_FROM" => false, "!DATE_ACTIVE_TO" => false],
+			[">=DATE_ACTIVE_TO" => $from, "<=DATE_ACTIVE_FROM" => $from, "!DATE_ACTIVE_FROM" => false, "!DATE_ACTIVE_TO" => false],
+		]
+	];
+}
+if (!empty($from) && !empty($to)) {
+	$NewsFilter = [
+		"!PROPERTY_IS_PAST_EVENT_VALUE" => "Да",
+		[
+			"LOGIC" => "OR",
+			[">=DATE_ACTIVE_FROM" => $from, "<=DATE_ACTIVE_FROM" => $to, "!DATE_ACTIVE_FROM" => false, "DATE_ACTIVE_TO" => false],
+			["<=DATE_ACTIVE_TO" => $to, ">=DATE_ACTIVE_TO" => $from, "DATE_ACTIVE_FROM" => false, "!DATE_ACTIVE_TO" => false],
+
+			["<=DATE_ACTIVE_FROM" => $from, ">=DATE_ACTIVE_TO" => $from, "!DATE_ACTIVE_TO" => false, "!DATE_ACTIVE_FROM" => false],
+			["<=DATE_ACTIVE_FROM" => $from, "<=DATE_ACTIVE_TO" => $to, ">=DATE_ACTIVE_TO" => $from, "!DATE_ACTIVE_TO" => false, "!DATE_ACTIVE_FROM" => false],
+			[">=DATE_ACTIVE_FROM" => $from, "<=DATE_ACTIVE_TO" => $to, "!DATE_ACTIVE_TO" => false, "!DATE_ACTIVE_FROM" => false],
+			[">=DATE_ACTIVE_FROM" => $from, "<=DATE_ACTIVE_FROM" => $to, ">=DATE_ACTIVE_TO" => $to, "!DATE_ACTIVE_TO" => false, "!DATE_ACTIVE_FROM" => false],
+		]
+	];
+}
+
+if (empty($from) && empty($to)) {
+	$date = date($DB->DateFormatToPHP(CLang::GetDateFormat("SHORT")), mktime());
+	$NewsFilter = array(
+		"!PROPERTY_IS_PAST_EVENT_VALUE" => "Да",
+		[
+			"LOGIC" => "OR",
+			[">=DATE_ACTIVE_TO" => $date, "!DATE_ACTIVE_TO" => false],
+			["<=DATE_ACTIVE_FROM" => $date, "!DATE_ACTIVE_TO" => false, ">=DATE_ACTIVE_TO" => $date],
+			[">=DATE_ACTIVE_FROM" => $date],
+		]
+	);
+}
+$GLOBALS['NewsFilter'] = $NewsFilter;
 ?>
 
-<?$APPLICATION->IncludeComponent(
-    "bitrix:news.list", 
-    "events_ajax", 
-    array(
+<? $APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"events_ajax",
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -119,8 +121,8 @@
 		"SORT_ORDER1" => "ASC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
-        "COMPONENT_TEMPLATE" => "events_ajax",
-        'LOAD_AJAX' => 'Y',
-    ),
-    false
-);?>
+		"COMPONENT_TEMPLATE" => "events_ajax",
+		'LOAD_AJAX' => 'Y',
+	),
+	false
+); ?>

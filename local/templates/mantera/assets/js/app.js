@@ -1,1 +1,221 @@
-!function(e){var t={};function n(o){if(t[o])return t[o].exports;var r=t[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,n),r.l=!0,r.exports}n.m=e,n.c=t,n.d=function(e,t,o){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:o})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)n.d(o,r,function(t){return e[t]}.bind(null,r));return o},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=0)}([function(e,t,n){n(1),n(2),n(3),n(4),n(5),n(6),n(7),n(8),n(9),n(10),e.exports=n(11)},function(e,t){},function(e,t){var n=document.getElementById("navToggle"),o=document.querySelector(".nav");n&&n.addEventListener("click",(function(e){o.classList.toggle("show")}))},function(e,t){},function(e,t){},function(e,t){var n=document.getElementById("buttonUp");n&&(document.getElementById("buttonUp").onclick=function(){document.body.scrollTop=0,document.documentElement.scrollTop=0}),window.onscroll=function(){n&&(document.body.scrollTop>500||document.documentElement.scrollTop>500?document.getElementById("buttonUp").style.display="block":document.getElementById("buttonUp").style.display="none")}},function(e,t){var n;(n=window).MaskedInput=function(e){if(!e||!e.elm||!e.format)return null;if(!(this instanceof n.MaskedInput))return new n.MaskedInput(e);var t=this,o=e.elm,r=e.format,c=e.allowed||"0123456789",a=e.allowedfx||function(){return!0},i=e.separator||"/:-",u=e.typeon||"_YMDhms",l=e.onbadkey||function(){},s=e.onfilled||function(){},d=e.badkeywait||0,f=!e.hasOwnProperty("preserve")||!!e.preserve,m=!0,v=!1,y=r,b=window.addEventListener?function(e,t,n,o){e.addEventListener(t,n,void 0!==o&&o)}:window.attachEvent?function(e,t,n){e.attachEvent("on"+t,n)}:function(e,t,n){e["on"+t]=n},p=function(){for(var e=o.value.length-1;e>=0;e--)for(var t=0,n=u.length;t<n;t++)if(o.value[e]===u[t])return!1;return!0},h=function(e){try{return e.focus(),e.selectionStart>=0?e.selectionStart:document.selection?-document.selection.createRange().moveStart("character",-e.value.length):-1}catch(e){return-1}},g=function(e,t){try{if(e.selectionStart)e.focus(),e.setSelectionRange(t,t);else if(e.createTextRange){var n=e.createTextRange();n.move("character",t),n.select()}}catch(e){return!1}return!0},k=function(e){var t="",n=(e=e||window.event).which,o=e.type;if(null==n&&(n=e.keyCode),null==n)return"";switch(n){case 8:t="bksp";break;case 46:t="keydown"===o?"del":".";break;case 16:t="shift";break;case 0:case 9:case 13:t="etc";break;case 37:case 38:case 39:case 40:t=e.shiftKey||39===e.charCode||void 0===e.charCode?String.fromCharCode(n):"etc";break;default:t=String.fromCharCode(n)}return t},E=function(e,t){e.preventDefault&&e.preventDefault(),e.returnValue=t||!1},S=function(e){var t=h(o),n=o.value,s="";switch(!0){case-1!==c.indexOf(e):if((t+=1)>r.length)return!1;for(;-1!==i.indexOf(n.charAt(t-1))&&t<=r.length;)t+=1;if(!a(e,t))return l(e),!1;s=n.substr(0,t-1)+e+n.substr(t),-1===c.indexOf(n.charAt(t))&&-1===u.indexOf(n.charAt(t))&&(t+=1);break;case"bksp"===e:if((t-=1)<0)return!1;for(;-1===c.indexOf(n.charAt(t))&&-1===u.indexOf(n.charAt(t))&&t>1;)t-=1;s=n.substr(0,t)+r.substr(t,1)+n.substr(t+1);break;case"del"===e:if(t>=n.length)return!1;for(;-1!==i.indexOf(n.charAt(t))&&""!==n.charAt(t);)t+=1;s=n.substr(0,t)+r.substr(t,1)+n.substr(t+1),t+=1;break;case"etc"===e:return!0;default:return!1}return o.value="",o.value=s,g(o,t),!1},w=function(e){if(!m)return!0;if(e=e||event,v)return E(e),!1;var t=k(e);return!!("etc"===t||e.metaKey||e.ctrlKey||e.altKey)||"bksp"!==t&&"del"!==t&&"shift"!==t&&(function(e){if(-1===c.indexOf(e)&&"bksp"!==e&&"del"!==e&&"etc"!==e){var t=h(o);return v=!0,l(e),setTimeout((function(){v=!1,g(o,t)}),d),!1}return!0}(t)?S(t)?(p()&&s(),E(e,!0),!0):(p()&&s(),E(e),!1):(E(e),!1))};return t.resetField=function(){o.value=r},t.setAllowed=function(e){c=e,t.resetField()},t.setFormat=function(e){r=e,t.resetField()},t.setSeparator=function(e){i=e,t.resetField()},t.setTypeon=function(e){u=e,t.resetField()},t.setEnabled=function(e){m=e},!o.tagName||"INPUT"!==o.tagName.toUpperCase()&&"TEXTAREA"!==o.tagName.toUpperCase()?null:(f&&""!==o.value||(o.value=r),b(o,"keydown",(function(e){!function(e){if(!m)return!0;if(e=e||event,v)return E(e),!1;var t=k(e);!e.metaKey&&!e.ctrlKey||"X"!==t&&"V"!==t?e.metaKey||e.ctrlKey||(""===o.value&&(o.value=r,g(o,0)),"bksp"!==t&&"del"!==t||(S(t),E(e))):E(e)}(e)})),b(o,"keypress",(function(e){w(e)})),b(o,"focus",(function(){y=o.value})),b(o,"blur",(function(){o.value!==y&&o.onchange&&o.onchange()})),t)}},function(e,t){var n=document.querySelector(".has-subnav-mobile");n&&n.addEventListener("click",(function(){n.classList.toggle("active")}))},function(e,t){document.querySelectorAll("[data-modal]");var n=document.body,o=document.querySelectorAll(".modal-custom__close"),r=document.querySelectorAll(".modal-custom");$(document).ready((function(){document.querySelectorAll("[data-modal]").forEach((function(e){e.addEventListener("click",(function(e){var t=e.currentTarget.getAttribute("data-modal"),o=document.getElementById(t),r=o.querySelector(".modal-custom__content");r.addEventListener("click",(function(e){e.stopPropagation()})),o.classList.add("show"),n.classList.add("no-scroll"),setTimeout((function(){r.style.transform="none",r.style.opacity="1"}),1)}))}))})),o.forEach((function(e){e.addEventListener("click",(function(e){var t=e.currentTarget.closest(".modal-custom");closeModal(t)}))})),r.forEach((function(e){e.addEventListener("click",(function(e){var t=e.currentTarget;closeModal(t)}))})),window.closeModal=function(e){e&&(e.querySelector(".modal-custom__content").removeAttribute("style"),setTimeout((function(){e.classList.remove("show"),n.classList.remove("no-scroll")}),200))}},function(e,t){document.addEventListener("DOMContentLoaded",(function(){var e=document.querySelectorAll(".tabs-promo__nav-btn"),t=document.querySelectorAll(".tabs-promo__item");e.forEach((function(n){n.addEventListener("click",(function(){var o=n,r=o.getAttribute("data-tab-item"),c=document.querySelector(r);o.classList.contains("active")||(e.forEach((function(e){e.classList.remove("active")})),t.forEach((function(e){e.classList.remove("active")})),o.classList.add("active"),c.classList.add("active"),$(".promo-slider.slick-initialized").slick("setPosition"))}))})),document.querySelector(".tabs-promo__nav-btn:nth-child(1)")&&document.querySelector(".tabs-promo__nav-btn:nth-child(1)").click()}))},function(e,t){document.addEventListener("DOMContentLoaded",(function(){var e=document.querySelectorAll("[data-tab-link]"),t=document.querySelectorAll("[data-tab]");e&&e.forEach((function(n){n.addEventListener("click",(function(o){e.forEach((function(e){e.classList.remove("links-list__item--active")})),n.classList.add("links-list__item--active");var r=o.currentTarget.getAttribute("data-tab-link"),c=document.querySelector('div[data-tab="'+r+'"]');c&&t&&(t.forEach((function(e){e.style.opacity="0",e.style.visibility="hidden"})),c.style.opacity="1",c.style.visibility="visible")}))})),t&&t.forEach((function(e,t){t&&(e.style.opacity="0")}))}))},function(e,t){}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/assets/js/app.js":
+/*!******************************!*\
+  !*** ./src/assets/js/app.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/burger.js":
+/*!*********************************!*\
+  !*** ./src/assets/js/burger.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var burger = document.getElementById('navToggle');\nvar mobileNav = document.querySelector('.nav');\n\nif (burger) {\n  burger.addEventListener(\"click\", function (event) {\n    mobileNav.classList.toggle('show');\n  });\n}\n\n//# sourceURL=webpack:///./src/assets/js/burger.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/email-validate.js":
+/*!*****************************************!*\
+  !*** ./src/assets/js/email-validate.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// const btnsSubmit = document.querySelectorAll('[type=\"submit\"]');\n// const inputsEmail = document.querySelectorAll('[name=\"email\"]');\n// document.querySelectorAll('form[name^=fm]').forEach(form => {\n// })\n// btnsSubmit.forEach(btn => {\n//     btn.addEventListener('click', event => {\n//         inputsEmail.forEach(input => {\n//             if (validateEmail(input.value)) {\n//                 input.style.borderColor = '#909090'\n//             } else {\n//                 input.style.borderColor = 'red'\n//             }\n//         });\n//     });\n// });\n// function validateEmail(email) {\n//     const reg = /^([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$/;\n//     return reg.test(String(email).toLowerCase());\n// }\n\n//# sourceURL=webpack:///./src/assets/js/email-validate.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/header-sticky.js":
+/*!****************************************!*\
+  !*** ./src/assets/js/header-sticky.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// const header = document.querySelector(\"#header\");\n// window.addEventListener(\"scroll\", stickyHeader);\n// window.addEventListener(\"DOMContentLoaded\", stickyHeader);\n// function stickyHeader() {\n//     let strcollPos = window.scrollY;\n//     if (strcollPos > 99) {\n//         header.classList.add('sticky-header');\n//     }\n//     else {\n//         header.classList.remove('sticky-header');\n//     }\n// }\n\n//# sourceURL=webpack:///./src/assets/js/header-sticky.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/header.js":
+/*!*********************************!*\
+  !*** ./src/assets/js/header.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var buttonUp = document.getElementById(\"buttonUp\");\n\nif (buttonUp) {\n  document.getElementById(\"buttonUp\").onclick = function scrollUpFunction() {\n    document.body.scrollTop = 0;\n    document.documentElement.scrollTop = 0;\n  };\n}\n\nwindow.onscroll = function () {\n  if (buttonUp) {\n    scrollFunction();\n  }\n};\n\nfunction scrollFunction() {\n  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {\n    document.getElementById(\"buttonUp\").style.display = \"block\";\n  } else {\n    document.getElementById(\"buttonUp\").style.display = \"none\";\n  }\n}\n\n//# sourceURL=webpack:///./src/assets/js/header.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/masked-phone.js":
+/*!***************************************!*\
+  !*** ./src/assets/js/masked-phone.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("(function (a) {\n  a.MaskedInput = function (f) {\n    if (!f || !f.elm || !f.format) {\n      return null;\n    }\n\n    if (!(this instanceof a.MaskedInput)) {\n      return new a.MaskedInput(f);\n    }\n\n    var o = this,\n        d = f.elm,\n        s = f.format,\n        i = f.allowed || \"0123456789\",\n        h = f.allowedfx || function () {\n      return true;\n    },\n        p = f.separator || \"/:-\",\n        n = f.typeon || \"_YMDhms\",\n        c = f.onbadkey || function () {},\n        q = f.onfilled || function () {},\n        w = f.badkeywait || 0,\n        A = f.hasOwnProperty(\"preserve\") ? !!f.preserve : true,\n        l = true,\n        y = false,\n        t = s,\n        j = function () {\n      if (window.addEventListener) {\n        return function (E, C, D, B) {\n          E.addEventListener(C, D, B === undefined ? false : B);\n        };\n      }\n\n      if (window.attachEvent) {\n        return function (D, B, C) {\n          D.attachEvent(\"on\" + B, C);\n        };\n      }\n\n      return function (D, B, C) {\n        D[\"on\" + B] = C;\n      };\n    }(),\n        u = function u() {\n      for (var B = d.value.length - 1; B >= 0; B--) {\n        for (var D = 0, C = n.length; D < C; D++) {\n          if (d.value[B] === n[D]) {\n            return false;\n          }\n        }\n      }\n\n      return true;\n    },\n        x = function x(C) {\n      try {\n        C.focus();\n\n        if (C.selectionStart >= 0) {\n          return C.selectionStart;\n        }\n\n        if (document.selection) {\n          var B = document.selection.createRange();\n          return -B.moveStart(\"character\", -C.value.length);\n        }\n\n        return -1;\n      } catch (D) {\n        return -1;\n      }\n    },\n        b = function b(C, E) {\n      try {\n        if (C.selectionStart) {\n          C.focus();\n          C.setSelectionRange(E, E);\n        } else {\n          if (C.createTextRange) {\n            var B = C.createTextRange();\n            B.move(\"character\", E);\n            B.select();\n          }\n        }\n      } catch (D) {\n        return false;\n      }\n\n      return true;\n    },\n        m = function m(D) {\n      D = D || window.event;\n      var C = \"\",\n          E = D.which,\n          B = D.type;\n\n      if (E === undefined || E === null) {\n        E = D.keyCode;\n      }\n\n      if (E === undefined || E === null) {\n        return \"\";\n      }\n\n      switch (E) {\n        case 8:\n          C = \"bksp\";\n          break;\n\n        case 46:\n          C = B === \"keydown\" ? \"del\" : \".\";\n          break;\n\n        case 16:\n          C = \"shift\";\n          break;\n\n        case 0:\n        case 9:\n        case 13:\n          C = \"etc\";\n          break;\n\n        case 37:\n        case 38:\n        case 39:\n        case 40:\n          C = !D.shiftKey && D.charCode !== 39 && D.charCode !== undefined ? \"etc\" : String.fromCharCode(E);\n          break;\n\n        default:\n          C = String.fromCharCode(E);\n          break;\n      }\n\n      return C;\n    },\n        v = function v(B, C) {\n      if (B.preventDefault) {\n        B.preventDefault();\n      }\n\n      B.returnValue = C || false;\n    },\n        k = function k(B) {\n      var D = x(d),\n          F = d.value,\n          E = \"\",\n          C = true;\n\n      switch (C) {\n        case i.indexOf(B) !== -1:\n          D = D + 1;\n\n          if (D > s.length) {\n            return false;\n          }\n\n          while (p.indexOf(F.charAt(D - 1)) !== -1 && D <= s.length) {\n            D = D + 1;\n          }\n\n          if (!h(B, D)) {\n            c(B);\n            return false;\n          }\n\n          E = F.substr(0, D - 1) + B + F.substr(D);\n\n          if (i.indexOf(F.charAt(D)) === -1 && n.indexOf(F.charAt(D)) === -1) {\n            D = D + 1;\n          }\n\n          break;\n\n        case B === \"bksp\":\n          D = D - 1;\n\n          if (D < 0) {\n            return false;\n          }\n\n          while (i.indexOf(F.charAt(D)) === -1 && n.indexOf(F.charAt(D)) === -1 && D > 1) {\n            D = D - 1;\n          }\n\n          E = F.substr(0, D) + s.substr(D, 1) + F.substr(D + 1);\n          break;\n\n        case B === \"del\":\n          if (D >= F.length) {\n            return false;\n          }\n\n          while (p.indexOf(F.charAt(D)) !== -1 && F.charAt(D) !== \"\") {\n            D = D + 1;\n          }\n\n          E = F.substr(0, D) + s.substr(D, 1) + F.substr(D + 1);\n          D = D + 1;\n          break;\n\n        case B === \"etc\":\n          return true;\n\n        default:\n          return false;\n      }\n\n      d.value = \"\";\n      d.value = E;\n      b(d, D);\n      return false;\n    },\n        g = function g(B) {\n      if (i.indexOf(B) === -1 && B !== \"bksp\" && B !== \"del\" && B !== \"etc\") {\n        var C = x(d);\n        y = true;\n        c(B);\n        setTimeout(function () {\n          y = false;\n          b(d, C);\n        }, w);\n        return false;\n      }\n\n      return true;\n    },\n        z = function z(C) {\n      if (!l) {\n        return true;\n      }\n\n      C = C || event;\n\n      if (y) {\n        v(C);\n        return false;\n      }\n\n      var B = m(C);\n\n      if ((C.metaKey || C.ctrlKey) && (B === \"X\" || B === \"V\")) {\n        v(C);\n        return false;\n      }\n\n      if (C.metaKey || C.ctrlKey) {\n        return true;\n      }\n\n      if (d.value === \"\") {\n        d.value = s;\n        b(d, 0);\n      }\n\n      if (B === \"bksp\" || B === \"del\") {\n        k(B);\n        v(C);\n        return false;\n      }\n\n      return true;\n    },\n        e = function e(C) {\n      if (!l) {\n        return true;\n      }\n\n      C = C || event;\n\n      if (y) {\n        v(C);\n        return false;\n      }\n\n      var B = m(C);\n\n      if (B === \"etc\" || C.metaKey || C.ctrlKey || C.altKey) {\n        return true;\n      }\n\n      if (B !== \"bksp\" && B !== \"del\" && B !== \"shift\") {\n        if (!g(B)) {\n          v(C);\n          return false;\n        }\n\n        if (k(B)) {\n          if (u()) {\n            q();\n          }\n\n          v(C, true);\n          return true;\n        }\n\n        if (u()) {\n          q();\n        }\n\n        v(C);\n        return false;\n      }\n\n      return false;\n    },\n        r = function r() {\n      if (!d.tagName || d.tagName.toUpperCase() !== \"INPUT\" && d.tagName.toUpperCase() !== \"TEXTAREA\") {\n        return null;\n      }\n\n      if (!A || d.value === \"\") {\n        d.value = s;\n      }\n\n      j(d, \"keydown\", function (B) {\n        z(B);\n      });\n      j(d, \"keypress\", function (B) {\n        e(B);\n      });\n      j(d, \"focus\", function () {\n        t = d.value;\n      });\n      j(d, \"blur\", function () {\n        if (d.value !== t && d.onchange) {\n          d.onchange();\n        }\n      });\n      return o;\n    };\n\n    o.resetField = function () {\n      d.value = s;\n    };\n\n    o.setAllowed = function (B) {\n      i = B;\n      o.resetField();\n    };\n\n    o.setFormat = function (B) {\n      s = B;\n      o.resetField();\n    };\n\n    o.setSeparator = function (B) {\n      p = B;\n      o.resetField();\n    };\n\n    o.setTypeon = function (B) {\n      n = B;\n      o.resetField();\n    };\n\n    o.setEnabled = function (B) {\n      l = B;\n    };\n\n    return r();\n  };\n})(window);\n\n//# sourceURL=webpack:///./src/assets/js/masked-phone.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/mobile-dropdown.js":
+/*!******************************************!*\
+  !*** ./src/assets/js/mobile-dropdown.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var btn = document.querySelector('.has-subnav-mobile');\n\nif (btn) {\n  btn.addEventListener('click', function () {\n    btn.classList.toggle('active');\n  });\n}\n\n//# sourceURL=webpack:///./src/assets/js/mobile-dropdown.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/modal.js":
+/*!********************************!*\
+  !*** ./src/assets/js/modal.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var modalBtn = document.querySelectorAll('[data-modal]');\nvar body = document.body;\nvar modalClose = document.querySelectorAll('.modal-custom__close');\nvar modal = document.querySelectorAll('.modal-custom');\n$(document).ready(function () {\n  document.querySelectorAll('[data-modal]').forEach(function (item) {\n    item.addEventListener('click', function (event) {\n      var $this = event.currentTarget;\n      var modalId = $this.getAttribute('data-modal');\n      var modal = document.getElementById(modalId);\n      var modalContent = modal.querySelector('.modal-custom__content');\n      modalContent.addEventListener('click', function (event) {\n        event.stopPropagation();\n      });\n      modal.classList.add('show');\n      body.classList.add('no-scroll');\n      setTimeout(function () {\n        modalContent.style.transform = 'none';\n        modalContent.style.opacity = '1';\n      }, 1);\n    });\n  });\n});\nmodalClose.forEach(function (item) {\n  item.addEventListener('click', function (event) {\n    var currentModal = event.currentTarget.closest('.modal-custom');\n    closeModal(currentModal);\n  });\n});\nmodal.forEach(function (item) {\n  item.addEventListener('click', function (event) {\n    var currentModal = event.currentTarget;\n    closeModal(currentModal);\n  });\n});\n\nwindow.closeModal = function (currentModal) {\n  if (!currentModal) return;\n  var modalContent = currentModal.querySelector('.modal-custom__content');\n  modalContent.removeAttribute('style');\n  setTimeout(function () {\n    currentModal.classList.remove('show');\n    body.classList.remove('no-scroll');\n  }, 200);\n};\n\n//# sourceURL=webpack:///./src/assets/js/modal.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/tabs-promo.js":
+/*!*************************************!*\
+  !*** ./src/assets/js/tabs-promo.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("document.addEventListener(\"DOMContentLoaded\", function () {\n  var tabsBtn = document.querySelectorAll(\".tabs-promo__nav-btn\");\n  var tabsItems = document.querySelectorAll(\".tabs-promo__item\");\n  tabsBtn.forEach(onTabClick);\n\n  function onTabClick(item) {\n    item.addEventListener(\"click\", function () {\n      var currentBtn = item;\n      var tabId = currentBtn.getAttribute(\"data-tab-item\");\n      var currentTab = document.querySelector(tabId);\n\n      if (!currentBtn.classList.contains('active')) {\n        tabsBtn.forEach(function (item) {\n          item.classList.remove('active');\n        });\n        tabsItems.forEach(function (item) {\n          item.classList.remove('active');\n        });\n        currentBtn.classList.add('active');\n        currentTab.classList.add('active');\n        $('.promo-slider.slick-initialized').slick(\"setPosition\");\n      }\n    });\n  }\n\n  if (document.querySelector(\".tabs-promo__nav-btn:nth-child(1)\")) {\n    document.querySelector(\".tabs-promo__nav-btn:nth-child(1)\").click();\n  }\n});\n\n//# sourceURL=webpack:///./src/assets/js/tabs-promo.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/tabs.js":
+/*!*******************************!*\
+  !*** ./src/assets/js/tabs.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("document.addEventListener(\"DOMContentLoaded\", function () {\n  var btns = document.querySelectorAll('[data-tab-link]');\n  var tabs = document.querySelectorAll('[data-tab]');\n\n  if (btns) {\n    btns.forEach(function (item) {\n      item.addEventListener('click', function (event) {\n        btns.forEach(function (elem) {\n          elem.classList.remove(\"links-list__item--active\");\n        });\n        item.classList.add(\"links-list__item--active\");\n        var tab_id = event.currentTarget.getAttribute('data-tab-link');\n        var tab = document.querySelector('div[data-tab=\"' + tab_id + '\"]');\n\n        if (tab && tabs) {\n          tabs.forEach(function (elem) {\n            elem.style.opacity = \"0\";\n            elem.style.visibility = \"hidden\";\n          });\n          tab.style.opacity = \"1\";\n          tab.style.visibility = \"visible\";\n        }\n      });\n    });\n  }\n\n  if (tabs) {\n    tabs.forEach(function (elem, i) {\n      if (i) {\n        elem.style.opacity = \"0\"; // elem.style.visibility = \"hidden\"\n      }\n    });\n  }\n});\n\n//# sourceURL=webpack:///./src/assets/js/tabs.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/test.js":
+/*!*******************************!*\
+  !*** ./src/assets/js/test.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// var buffer = [] \n// for(let bound=0; bound<64; bound++) {\n//   buffer.push(bound)\n// }\n// console.log(\"Result buffer: \" + bound);\n\n//# sourceURL=webpack:///./src/assets/js/test.js?");
+
+/***/ }),
+
+/***/ 0:
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./src/assets/js/app.js ./src/assets/js/burger.js ./src/assets/js/email-validate.js ./src/assets/js/header-sticky.js ./src/assets/js/header.js ./src/assets/js/masked-phone.js ./src/assets/js/mobile-dropdown.js ./src/assets/js/modal.js ./src/assets/js/tabs-promo.js ./src/assets/js/tabs.js ./src/assets/js/test.js ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("__webpack_require__(/*! D:\\Programming\\Projects\\UI\\mantera-ui\\src\\assets\\js\\app.js */\"./src/assets/js/app.js\");\n__webpack_require__(/*! D:\\Programming\\Projects\\UI\\mantera-ui\\src\\assets\\js\\burger.js */\"./src/assets/js/burger.js\");\n__webpack_require__(/*! D:\\Programming\\Projects\\UI\\mantera-ui\\src\\assets\\js\\email-validate.js */\"./src/assets/js/email-validate.js\");\n__webpack_require__(/*! D:\\Programming\\Projects\\UI\\mantera-ui\\src\\assets\\js\\header-sticky.js */\"./src/assets/js/header-sticky.js\");\n__webpack_require__(/*! D:\\Programming\\Projects\\UI\\mantera-ui\\src\\assets\\js\\header.js */\"./src/assets/js/header.js\");\n__webpack_require__(/*! D:\\Programming\\Projects\\UI\\mantera-ui\\src\\assets\\js\\masked-phone.js */\"./src/assets/js/masked-phone.js\");\n__webpack_require__(/*! D:\\Programming\\Projects\\UI\\mantera-ui\\src\\assets\\js\\mobile-dropdown.js */\"./src/assets/js/mobile-dropdown.js\");\n__webpack_require__(/*! D:\\Programming\\Projects\\UI\\mantera-ui\\src\\assets\\js\\modal.js */\"./src/assets/js/modal.js\");\n__webpack_require__(/*! D:\\Programming\\Projects\\UI\\mantera-ui\\src\\assets\\js\\tabs-promo.js */\"./src/assets/js/tabs-promo.js\");\n__webpack_require__(/*! D:\\Programming\\Projects\\UI\\mantera-ui\\src\\assets\\js\\tabs.js */\"./src/assets/js/tabs.js\");\nmodule.exports = __webpack_require__(/*! D:\\Programming\\Projects\\UI\\mantera-ui\\src\\assets\\js\\test.js */\"./src/assets/js/test.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/app.js_./src/assets/js/burger.js_./src/assets/js/email-validate.js_./src/assets/js/header-sticky.js_./src/assets/js/header.js_./src/assets/js/masked-phone.js_./src/assets/js/mobile-dropdown.js_./src/assets/js/modal.js_./src/assets/js/tabs-promo.js_./src/assets/js/tabs.js_./src/assets/js/test.js?");
+
+/***/ })
+
+/******/ });

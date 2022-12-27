@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $.ajax({
             type: "GET",
             data: data,
-            url: '/calendar/ajax/getEventShedulerList.php',
+            url: '/events/ajax/getEventShedulerList.php',
             success: function (data) {
                 window.eventSheduler = data;
                 MultiSelectEventInit();

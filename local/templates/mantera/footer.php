@@ -8,9 +8,9 @@
                     
                     <div class="typography-body2 typography-bold typography-uppercase mb22">Контакты</div>
                     <div class="typography-body2 mb22">Юридический адрес: 354340, Россия, Краснодарский край, г. Сочи, проспект континентальный, дом 6, офис 1</div>
-                    <div class="typography-body2 mb22">E-mail: info@mantera-group.com</div>
-                    <div class="typography-body2 typography-bold typography-uppercase mb22">ПРЕСС-СЛУЖБА КОМПАНИИ MANTERA</div>
-                    <div class="typography-body2 mb22">E-mail: pr@mantera-group.com</div>
+                    <!-- <div class="typography-body2 mb22">E-mail: info@mantera-group.com</div> -->
+                    <div class="typography-body2 typography-bold typography-uppercase mb22">По всем вопросам:</div>
+                    <div class="typography-body2 mb22">Telegram: <a href="https://t.me/MANTERAHREVENTS" target="_blank">https://t.me/MANTERAHREVENTS</a></div>
                     <div class="row mb-3">
                         <div class="col-md-6 col-12 mb22">
                             <button class="btn btn--yellow btn--w100" type="button" data-modal="fm_question">Задать вопрос</button>
@@ -96,7 +96,7 @@
                     </div>
                     <div class="form-custom__footer form-custom__footer--center">
                         <div class="form-custom__policy">
-                            Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку <a target="_blank" href="/policy/">персональных данных</a>
+                            Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку <a target="_blank" href="https://mantera-group.com/policy/">персональных данных</a>
                         </div>
                         <input type="submit" class="btn btn--yellow btn--w50" value="Отправить" />
                     </div>
@@ -180,7 +180,7 @@
 					<div class="form-custom__footer form-custom__footer--center">
 						<div class="form-custom__policy form-custom__policy--pd">
 							Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку <a target="_blank"
-								href="/policy/">персональных данных</a>
+								href="https://mantera-group.com/policy/">персональных данных</a>
 						</div>
 						<input type="submit" class="btn btn--yellow btn--w50 btn--h60" value="Отправить" />
 					</div>

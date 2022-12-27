@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     const btnChange = document.getElementById('searchEventButton');
+    const textAjax = document.getElementById('news-ajax');
 
     btnChange.addEventListener("click", ()=> {
         
@@ -55,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     $('.show-btn').css('display', 'block');
                 }
                 setModal();
+                textAjax.innerHTML = "";
             });
         }
     });
@@ -137,4 +139,44 @@ function ShowMore(){
         }
         setModal();
     })
+}
+
+function setModal() {
+    e = document.querySelectorAll("[data-modal]");
+    var n = document.body,
+        o = document.querySelectorAll(".modal-custom__close"),
+        r = document.querySelectorAll(".modal-custom");
+    $(document).ready((function() {
+        document.querySelectorAll("[data-modal]").forEach((function(e) {
+            e.addEventListener("click", (function(e) {
+                var data = e.currentTarget.getAttribute("data-modal"),
+                    o = document.getElementById(data),
+                    r = o.querySelector(".modal-custom__content"),
+                    eventId = e.currentTarget.getAttribute("data-eventId");
+                    eventName = e.currentTarget.getAttribute("data-eventName");
+                    if (data == 'fm_sign_up') {
+                        getEventSheduler(eventId, eventName)
+                    }
+                r.addEventListener("click", (function(e) {
+                    e.stopPropagation()
+                })), o.classList.add("show"), n.classList.add("no-scroll"), setTimeout((function() {
+                    r.style.transform = "none", r.style.opacity = "1"
+                }), 1)
+            }))
+        }))
+    })), o.forEach((function(e) {
+        e.addEventListener("click", (function(e) {
+            var t = e.currentTarget.closest(".modal-custom");
+            closeModal(t)
+        }))
+    })), r.forEach((function(e) {
+        e.addEventListener("click", (function(e) {
+            var t = e.currentTarget;
+            closeModal(t)
+        }))
+    })), window.closeModal = function(e) {
+        e && (e.querySelector(".modal-custom__content").removeAttribute("style"), setTimeout((function() {
+            e.classList.remove("show"), n.classList.remove("no-scroll")
+        }), 200))
+    }
 }
